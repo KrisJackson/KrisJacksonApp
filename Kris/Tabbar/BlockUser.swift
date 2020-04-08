@@ -32,7 +32,7 @@ extension TabBarViewController {
     
     private func presentBlockedController() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "blocked") as! Blocked
+        let vc = storyBoard.instantiateViewController(withIdentifier: "Blocked") as! BlockedViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false, completion: nil)
     }

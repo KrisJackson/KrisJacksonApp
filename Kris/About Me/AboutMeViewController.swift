@@ -120,7 +120,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 //        isBlocked()
-        let blocked = BlockedUser(target: self)
+        let blocked = Blocked(target: self)
         blocked.isBlocked()
     }
     
@@ -145,7 +145,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     private func presentBlockedController() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "blocked") as! Blocked
+        let vc = storyBoard.instantiateViewController(withIdentifier: "Blocked") as! BlockedViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false, completion: nil)
     }

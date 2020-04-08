@@ -9,11 +9,11 @@
 import UIKit
 import Firebase
 
-class Blocked: UIViewController {
+class BlockedViewController: UIViewController {
     
 }
 
-class BlockedUser {
+class Blocked {
     private var target: AnyObject!
     
     /// Function prevents a user from entering the app if a user is blocked
@@ -37,7 +37,7 @@ class BlockedUser {
     
     private func presentBlockedController() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "blocked") as! Blocked
+        let vc = storyBoard.instantiateViewController(withIdentifier: "Blocked") as! BlockedViewController
         vc.modalPresentationStyle = .fullScreen
         target.present(vc, animated: false, completion: nil)
     }

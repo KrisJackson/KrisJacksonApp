@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="-914" y="-798"/>
         </scene>
-        <!--Blocked-->
+        <!--Blocked View Controller-->
         <scene sceneID="BVi-WL-AgQ">
             <objects>
-                <viewController storyboardIdentifier="blocked" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x21-xb-IBU" customClass="Blocked" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Blocked" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x21-xb-IBU" customClass="BlockedViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ze-e9-ZLv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
