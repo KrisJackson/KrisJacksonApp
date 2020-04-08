@@ -80,23 +80,30 @@ class SkillsViewController: UIViewController, UICollectionViewDelegate, UICollec
         isBlocked()
     }
     
+    /// Function prevents a user from entering the app if a user is blocked
     func isBlocked() {
-        Firestore.firestore().collection("devices").document(UIDevice.current.identifierForVendor!.uuidString).getDocument { (snapshot, error) in
-            if let snapshot = snapshot {
+        
+        // Vendor ID changes if app is deleted and redownloaded
+        let vendorID = UIDevice.current.identifierForVendor!.uuidString
+        
+        // Checks if device is blocked
+        Firestore.firestore().collection("devices")
+            .document(vendorID).getDocument { (snapshot, error) in
+                guard let snapshot = snapshot else { return }
                 DispatchQueue.main.async {
+                    // Present controller if user is blocked
                     if let isBlocked = snapshot.data()!["blocked"] as? Bool {
-                        
-                        if isBlocked {
-                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let vc = storyBoard.instantiateViewController(withIdentifier: "blocked") as! Blocked
-                            vc.modalPresentationStyle = .fullScreen
-                            self.present(vc, animated: false, completion: nil)
-                        }
-                        
+                        if isBlocked { self.presentBlockedController() }
                     }
                 }
-            }
         }
+    }
+    
+    private func presentBlockedController() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "blocked") as! Blocked
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false, completion: nil)
     }
     
     private func configureCollectionView() {
