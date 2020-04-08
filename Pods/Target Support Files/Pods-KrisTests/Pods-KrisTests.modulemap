@@ -1,0 +1,6 @@
+framework module Pods_KrisTests {
+  umbrella header "Pods-KrisTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
