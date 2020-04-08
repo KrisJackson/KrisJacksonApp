@@ -1,5 +1,5 @@
 //
-//  BlockUser.swift
+//  BlockedViewController.swift
 //  Kris
 //
 //  Created by Kristopher Jackson on 4/7/20.
@@ -9,7 +9,12 @@
 import UIKit
 import Firebase
 
-extension TabBarViewController {
+class BlockedViewController: UIViewController {
+    
+}
+
+class Blocked {
+    private var target: AnyObject!
     
     /// Function prevents a user from entering the app if a user is blocked
     func isBlocked() {
@@ -34,7 +39,10 @@ extension TabBarViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "Blocked") as! BlockedViewController
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: false, completion: nil)
+        target.present(vc, animated: false, completion: nil)
     }
     
+    init(target vc: AnyObject) {
+        target = vc
+    }
 }

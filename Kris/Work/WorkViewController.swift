@@ -65,26 +65,8 @@ class WorkViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        isBlocked()
-    }
-    
-    func isBlocked() {
-        Firestore.firestore().collection("devices").document(UIDevice.current.identifierForVendor!.uuidString).getDocument { (snapshot, error) in
-            if let snapshot = snapshot {
-                DispatchQueue.main.async {
-                    if let isBlocked = snapshot.data()!["blocked"] as? Bool {
-                        
-                        if isBlocked {
-                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let vc = storyBoard.instantiateViewController(withIdentifier: "blocked") as! Blocked
-                            vc.modalPresentationStyle = .fullScreen
-                            self.present(vc, animated: false, completion: nil)
-                        }
-                        
-                    }
-                }
-            }
-        }
+        let blocked = Blocked(target: self)
+        blocked.isBlocked()
     }
     
     private func configureCollectionView() {

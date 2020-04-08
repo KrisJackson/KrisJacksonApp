@@ -107,33 +107,8 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
         if let tabbarController = tabBarController as? TabBarViewController {
             tabbarController.tabBar.layer.shadowColor = UIColor.clear.cgColor
         }
-        isBlocked()
-    }
-    
-    func isBlocked() {
-        Firestore.firestore().collection("devices").document(UIDevice.current.identifierForVendor!.uuidString).getDocument { (snapshot, error) in
-            if let snapshot = snapshot {
-                DispatchQueue.main.async {
-                    if let isBlocked = snapshot.data()!["blocked"] as? Bool {
-                        
-                        if isBlocked {
-                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let vc = storyBoard.instantiateViewController(withIdentifier: "blocked") as! Blocked
-                            vc.modalPresentationStyle = .fullScreen
-                            self.present(vc, animated: false, completion: nil)
-                        }
-                        
-                    }
-                }
-            }
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        if let tabbarController = tabBarController as? TabBarViewController {
-            tabbarController.tabBar.layer.shadowColor = ColorTheme.tabBarShadowColor.cgColor
-        }
+        let blocked = Blocked(target: self)
+        blocked.isBlocked()
     }
     
     private func configureHeaderAndLogo() {

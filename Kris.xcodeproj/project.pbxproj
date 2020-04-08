@@ -257,12 +257,12 @@
 			path = "Globals & Misc";
 			sourceTree = "<group>";
 		};
-		18E7D3CB243D4A0000FF8FBF /* Blocked User */ = {
+		18E7D3CB243D4A0000FF8FBF /* Blocked */ = {
 			isa = PBXGroup;
 			children = (
 				18E7D3C9243D49F200FF8FBF /* BlockedViewController.swift */,
 			);
-			path = "Blocked User";
+			path = Blocked;
 			sourceTree = "<group>";
 		};
 		18ED981A2426D49900F98C67 = {
@@ -305,7 +305,7 @@
 				186EA9E82438CE1600282369 /* Message */,
 				18F3293B243CE10A000C0B15 /* Get Info */,
 				186EA9E324365E3700282369 /* Custom Views */,
-				18E7D3CB243D4A0000FF8FBF /* Blocked User */,
+				18E7D3CB243D4A0000FF8FBF /* Blocked */,
 				18E7D3C2243D48CF00FF8FBF /* Globals & Misc */,
 				18ED982F2426D49A00F98C67 /* Assets.xcassets */,
 				18ED98342426D49A00F98C67 /* Info.plist */,

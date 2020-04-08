@@ -57,7 +57,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        isBlocked()
+//        let blocked = Blocked(target: self)
+//        blocked.isBlocked()
     }
     
     /**
@@ -109,7 +110,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
      configureHeaderAndLogo - configures the design of headerview and logo ui
      
      */
-    
     private func configureHeaderAndLogo() {
         // Configs headerview
         view.addSubview(headerView)
