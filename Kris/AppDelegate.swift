@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SDWebImageManager.defaultImageLoader = SDImageLoadersManager.shared
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         getUser()
+        
         return true
     }
 

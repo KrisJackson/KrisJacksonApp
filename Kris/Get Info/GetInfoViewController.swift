@@ -189,7 +189,8 @@ class GetInfoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        isBlocked()
+        let blocked = Blocked(target: self)
+        blocked.isBlocked()
     }
 
     @objc private func dismissPage() {
@@ -272,24 +273,5 @@ class GetInfoViewController: UIViewController {
         scrollView.isScrollEnabled = false
         let offset = CGPoint(x: 0, y: -scrollView.contentInset.top)
         scrollView.setContentOffset(offset, animated: true)
-    }
-    
-    func isBlocked() {
-        Firestore.firestore().collection("devices").document(UIDevice.current.identifierForVendor!.uuidString).getDocument { (snapshot, error) in
-            if let snapshot = snapshot {
-                DispatchQueue.main.async {
-                    if let isBlocked = snapshot.data()!["blocked"] as? Bool {
-                        
-                        if isBlocked {
-                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let vc = storyBoard.instantiateViewController(withIdentifier: "Blocked") as! BlockedViewController
-                            vc.modalPresentationStyle = .fullScreen
-                            self.present(vc, animated: false, completion: nil)
-                        }
-                        
-                    }
-                }
-            }
-        }
     }
 }
