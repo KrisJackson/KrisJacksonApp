@@ -52,7 +52,6 @@
 		18EDACBC2434FA88004C11D8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDACBB2434FA88004C11D8 /* PostCell.swift */; };
 		18EDACBE2435139B004C11D8 /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDACBD2435139B004C11D8 /* BlogCell.swift */; };
 		18F3292E243CC753000C0B15 /* GoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3292D243CC753000C0B15 /* GoogleAds.swift */; };
-		18F32930243CC790000C0B15 /* BlockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3292F243CC790000C0B15 /* BlockUser.swift */; };
 		18F32932243CC7DF000C0B15 /* DetectScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */; };
 		18F32934243CC854000C0B15 /* PresentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32933243CC854000C0B15 /* PresentNotification.swift */; };
 		18F32938243CC9A3000C0B15 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32937243CC9A3000C0B15 /* TabBarViewController.swift */; };
@@ -130,7 +129,6 @@
 		18EDACBB2434FA88004C11D8 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		18EDACBD2435139B004C11D8 /* BlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCell.swift; sourceTree = "<group>"; };
 		18F3292D243CC753000C0B15 /* GoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAds.swift; sourceTree = "<group>"; };
-		18F3292F243CC790000C0B15 /* BlockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockUser.swift; sourceTree = "<group>"; };
 		18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectScreenShot.swift; sourceTree = "<group>"; };
 		18F32933243CC854000C0B15 /* PresentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentNotification.swift; sourceTree = "<group>"; };
 		18F32937243CC9A3000C0B15 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Kris/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -358,7 +356,6 @@
 			children = (
 				18F32937243CC9A3000C0B15 /* TabBarViewController.swift */,
 				18F3292D243CC753000C0B15 /* GoogleAds.swift */,
-				18F3292F243CC790000C0B15 /* BlockUser.swift */,
 				18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */,
 				18F32939243CCA74000C0B15 /* SlideAnimation.swift */,
 				18F32933243CC854000C0B15 /* PresentNotification.swift */,
@@ -672,7 +669,6 @@
 				18E7D3C8243D497B00FF8FBF /* Vibrations.swift in Sources */,
 				18F32938243CC9A3000C0B15 /* TabBarViewController.swift in Sources */,
 				182580BA243374FC00A0317E /* AlbumCell.swift in Sources */,
-				18F32930243CC790000C0B15 /* BlockUser.swift in Sources */,
 				183BC2852428D357006A01F8 /* AboutMeEducationCell.swift in Sources */,
 				18ED982B2426D49900F98C67 /* AboutMeViewController.swift in Sources */,
 				182580A8242E418300A0317E /* SkillCellwHeader.swift in Sources */,
