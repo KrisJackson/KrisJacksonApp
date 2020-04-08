@@ -100,11 +100,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         tabBar.layer.shadowColor = ColorTheme.tabBarShadowColor.cgColor
     }
     
-    
-    
-    
-    
-    
     /**
      
      configureHeaderAndLogo - configures the design of headerview and logo ui
