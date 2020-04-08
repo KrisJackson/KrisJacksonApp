@@ -11,11 +11,12 @@ import GoogleMobileAds
 
 extension TabBarViewController: GADBannerViewDelegate {
     
-    
+    /// Creates a view above TabBar that contains Google Ad banner
     func configureAd() {
         let testID = "ca-app-pub-3940256099942544/2934735716"
         let productionID = "ca-app-pub-7654666255076412/8220573825"
         
+        // Banner view
         let bannerView: GADBannerView = {
             let ad = GADBannerView(adSize: kGADAdSizeBanner)
             ad.load(GADRequest())
@@ -35,22 +36,29 @@ extension TabBarViewController: GADBannerViewDelegate {
             return ad
         }()
         
+        // add banner about TabBar
         self.view.addSubview(bannerView)
         self.view.bringSubviewToFront(bannerView)
         bannerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         bannerView.bottomAnchor.constraint(equalTo: tabBar.topAnchor).isActive = true
         bannerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-//        bannerView.layer.cornerRadius = 0
-
     }
+    
+    
+    
+    /**
+     Delegate Functions
+     -
+     */
+    
     
     /// Tells the delegate an ad request loaded an ad.
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-      bannerView.alpha = 0
-      UIView.animate(withDuration: 1, animations: {
-        bannerView.alpha = 1
-      })
+        // Animated enterance of ad
+        bannerView.alpha = 0
+        UIView.animate(withDuration: 1, animations: {
+            bannerView.alpha = 1
+        })
     }
 
 
