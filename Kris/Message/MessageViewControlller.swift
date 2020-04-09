@@ -111,6 +111,13 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
         blocked.isBlocked()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        if let tabbarController = tabBarController as? TabBarViewController {
+            tabbarController.tabBar.layer.shadowColor = ColorTheme.tabBarShadowColor.cgColor
+        }
+    }
+    
     private func configureHeaderAndLogo() {
         // Configs headerview
         view.addSubview(headerView)
