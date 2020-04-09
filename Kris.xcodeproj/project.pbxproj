@@ -55,7 +55,7 @@
 		18F32932243CC7DF000C0B15 /* DetectScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */; };
 		18F32934243CC854000C0B15 /* PresentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32933243CC854000C0B15 /* PresentNotification.swift */; };
 		18F32938243CC9A3000C0B15 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32937243CC9A3000C0B15 /* TabBarViewController.swift */; };
-		18F3293A243CCA74000C0B15 /* SlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32939243CCA74000C0B15 /* SlideAnimation.swift */; };
+		18F3293A243CCA74000C0B15 /* TabBarSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32939243CCA74000C0B15 /* TabBarSlideAnimation.swift */; };
 		DEEF4292F1E293A1CE02E791 /* Pods_KrisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DF4825DE935201B1D68A4F /* Pods_KrisTests.framework */; };
 		FADA3525C9B61EBA2C81432B /* Pods_Kris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF12003CF8BF5C669CAB551A /* Pods_Kris.framework */; };
 /* End PBXBuildFile section */
@@ -132,7 +132,7 @@
 		18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectScreenShot.swift; sourceTree = "<group>"; };
 		18F32933243CC854000C0B15 /* PresentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentNotification.swift; sourceTree = "<group>"; };
 		18F32937243CC9A3000C0B15 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Kris/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
-		18F32939243CCA74000C0B15 /* SlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimation.swift; sourceTree = "<group>"; };
+		18F32939243CCA74000C0B15 /* TabBarSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSlideAnimation.swift; sourceTree = "<group>"; };
 		67C13A1D7B2C4B0156C0DC3D /* Pods-KrisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KrisTests.release.xcconfig"; path = "Target Support Files/Pods-KrisTests/Pods-KrisTests.release.xcconfig"; sourceTree = "<group>"; };
 		753E2119420554CF88B8E55F /* Pods-Kris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kris.debug.xcconfig"; path = "Target Support Files/Pods-Kris/Pods-Kris.debug.xcconfig"; sourceTree = "<group>"; };
 		8779C2CE396F4C386543FD9F /* Pods-KrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KrisTests.debug.xcconfig"; path = "Target Support Files/Pods-KrisTests/Pods-KrisTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -357,7 +357,7 @@
 				18F32937243CC9A3000C0B15 /* TabBarViewController.swift */,
 				18F3292D243CC753000C0B15 /* GoogleAds.swift */,
 				18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */,
-				18F32939243CCA74000C0B15 /* SlideAnimation.swift */,
+				18F32939243CCA74000C0B15 /* TabBarSlideAnimation.swift */,
 				18F32933243CC854000C0B15 /* PresentNotification.swift */,
 			);
 			path = Tabbar;
@@ -661,7 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E7D3CD243D4A1B00FF8FBF /* Database.swift in Sources */,
-				18F3293A243CCA74000C0B15 /* SlideAnimation.swift in Sources */,
+				18F3293A243CCA74000C0B15 /* TabBarSlideAnimation.swift in Sources */,
 				18E7D3CF243D4A5900FF8FBF /* Timestamp.swift in Sources */,
 				18ED98592426DDB300F98C67 /* WorkViewController.swift in Sources */,
 				18F32934243CC854000C0B15 /* PresentNotification.swift in Sources */,

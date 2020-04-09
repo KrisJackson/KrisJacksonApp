@@ -12,19 +12,16 @@ import Firebase
 extension TabBarViewController {
     
     func screenShot() {
-        
         NotificationCenter.default.addObserver(
             forName: UIApplication.userDidTakeScreenshotNotification,
             object: nil, queue: OperationQueue.main
         ) { notification in
-            
-            // Record screenshot
+            // Record screenshot taken
             Firestore.firestore().collection("screenshots").document().setData([
                 "date": self.getTodayString(),
                 "deviceID": UIDevice.current.identifierForVendor!.uuidString,
                 "deviceName": UIDevice.current.name,
             ], merge: true)
-            
         }
     }
     

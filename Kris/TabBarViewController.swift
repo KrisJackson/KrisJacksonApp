@@ -46,10 +46,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
         configureTabBarAppearance()
         configureHeaderAndLogo()
-//        configureAd()
         screenShot()
         
-        // Notifications
+        // Present Notifications
         getNewMessage()
         getNewBlog()
     }

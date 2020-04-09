@@ -1,5 +1,5 @@
 //
-//  SlideAnimation.swift
+//  TabBarSlideAnimation.swift
 //  Kris
 //
 //  Created by Kristopher Jackson on 4/7/20.
@@ -9,7 +9,6 @@
 import UIKit
 
 extension TabBarViewController {
-    
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         // slide views to the side
         if let fromView = tabBarController.selectedViewController?.view,

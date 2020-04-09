@@ -13,94 +13,105 @@ extension TabBarViewController {
     
     func getNewMessage() {
         var isInitial = true
+        let vendorID = UIDevice.current.identifierForVendor!.uuidString
         Firestore.firestore().collection("messages")
             .whereField("fromOwner", isEqualTo: true)
-            .whereField("userID", isEqualTo: UIDevice.current.identifierForVendor!.uuidString)
+            .whereField("userID", isEqualTo: vendorID)
             .addSnapshotListener { (snapshot, error) in
-                if let snapshot = snapshot {
-                    snapshot.documentChanges.forEach { (diff) in
-                        if ((diff.type == .added) && (!isInitial)) {
-                            
-                            let pStyle = NSMutableParagraphStyle()
-                            pStyle.lineSpacing = 2
-                            pStyle.alignment = .center
-                            
-                            let header = NSMutableAttributedString(string: "Kris ", attributes: [
-                                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold),
-                                NSAttributedString.Key.paragraphStyle: pStyle,
-                            ])
-                    
-                            let body = NSMutableAttributedString(string: "just sent you a ", attributes: [
-                                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .regular),
-                                NSAttributedString.Key.paragraphStyle: pStyle
-                            ])
-                            
-                            let type = NSMutableAttributedString(string: "new message", attributes: [
-                                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold),
-                                NSAttributedString.Key.paragraphStyle: pStyle,
-                                NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1),
-                            ])
-                            let pun = NSMutableAttributedString(string: "! 🎉", attributes: [
-                                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .regular),
-                                NSAttributedString.Key.paragraphStyle: pStyle,
-                            ])
-                            
-                            header.append(body)
-                            header.append(type)
-                            header.append(pun)
-                            self.presentNotification(string: header)
-                        }
+                guard let snapshot = snapshot else { return }
+                snapshot.documentChanges.forEach { (diff) in
+                    if ((diff.type == .added) && (!isInitial)) {
+                        // Present notification
+                        self.presentNotification(string: self.messageString())
                     }
-                    isInitial = false
                 }
+                isInitial = false
         }
     }
     
+    
     func getNewBlog() {
         var isInitial = true
-        Firestore.firestore().collection("blog")
-            .addSnapshotListener { (snapshot, error) in
-                if let snapshot = snapshot {
-                    snapshot.documentChanges.forEach { (diff) in
-                        if ((diff.type == .added) && (!isInitial)) {
-                            
-                            let pStyle = NSMutableParagraphStyle()
-                            pStyle.lineSpacing = 2
-                            pStyle.alignment = .center
-                            
-                            let header = NSMutableAttributedString(string: "Kris ", attributes: [
-                                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold),
-                                NSAttributedString.Key.paragraphStyle: pStyle,
-                            ])
-                    
-                            let body = NSMutableAttributedString(string: "just added a ", attributes: [
-                                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .regular),
-                                NSAttributedString.Key.paragraphStyle: pStyle
-                            ])
-                            
-                            let type = NSMutableAttributedString(string: "new blog post", attributes: [
-                                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold),
-                                NSAttributedString.Key.paragraphStyle: pStyle,
-                                NSAttributedString.Key.foregroundColor: ColorTheme.blue,
-                            ])
-                            let pun = NSMutableAttributedString(string: "! 📝", attributes: [
-                                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .regular),
-                                NSAttributedString.Key.paragraphStyle: pStyle,
-                            ])
-                            
-                            header.append(body)
-                            header.append(type)
-                            header.append(pun)
-                            self.presentNotification(string: header)
-                        }
-                    }
-                    isInitial = false
+        Firestore.firestore().collection("blog").addSnapshotListener { (snapshot, error) in
+            guard let snapshot = snapshot else { return }
+            snapshot.documentChanges.forEach { (diff) in
+                if ((diff.type == .added) && (!isInitial)) {
+                    // Present notification
+                    self.presentNotification(string: self.blogString())
                 }
+            }
+            isInitial = false
         }
     }
+    
+    
+    private func messageString() -> NSMutableAttributedString {
+        let pStyle = NSMutableParagraphStyle()
+        pStyle.lineSpacing = 2
+        pStyle.alignment = .center
+        
+        let header = NSMutableAttributedString(string: "Kris ", attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold),
+            NSAttributedString.Key.paragraphStyle: pStyle,
+        ])
 
-    func presentNotification(string: NSMutableAttributedString) {
+        let body = NSMutableAttributedString(string: "just sent you a ", attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .regular),
+            NSAttributedString.Key.paragraphStyle: pStyle
+        ])
+        
+        let type = NSMutableAttributedString(string: "new message", attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold),
+            NSAttributedString.Key.paragraphStyle: pStyle,
+            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1),
+        ])
+        let pun = NSMutableAttributedString(string: "! 🎉", attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .regular),
+            NSAttributedString.Key.paragraphStyle: pStyle,
+        ])
+        
+        header.append(body)
+        header.append(type)
+        header.append(pun)
+        return header
+    }
+    
+    
+    private func blogString() -> NSMutableAttributedString {
+        let pStyle = NSMutableParagraphStyle()
+        pStyle.lineSpacing = 2
+        pStyle.alignment = .center
+        
+        let header = NSMutableAttributedString(string: "Kris ", attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold),
+            NSAttributedString.Key.paragraphStyle: pStyle,
+        ])
+
+        let body = NSMutableAttributedString(string: "just added a ", attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .regular),
+            NSAttributedString.Key.paragraphStyle: pStyle
+        ])
+        
+        let type = NSMutableAttributedString(string: "new blog post", attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold),
+            NSAttributedString.Key.paragraphStyle: pStyle,
+            NSAttributedString.Key.foregroundColor: ColorTheme.blue,
+        ])
+        let pun = NSMutableAttributedString(string: "! 📝", attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .regular),
+            NSAttributedString.Key.paragraphStyle: pStyle,
+        ])
+        
+        header.append(body)
+        header.append(type)
+        header.append(pun)
+        return header
+    }
+
+    
+    private func presentNotification(string: NSMutableAttributedString) {
         var notificationTopAnchor: NSLayoutConstraint!
+        
         let notificationView: UIView = {
             let view = UIView()
             view.layer.cornerRadius = 8
@@ -111,7 +122,6 @@ extension TabBarViewController {
             view.layer.shadowOpacity = 1
             view.layer.shadowOffset = CGSize(width: 0, height: 0)
             view.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.4)
-
             return view
         }()
 
@@ -136,30 +146,32 @@ extension TabBarViewController {
         label.rightAnchor.constraint(equalTo: notificationView.rightAnchor, constant: -15).isActive = true
         label.bottomAnchor.constraint(equalTo: notificationView.bottomAnchor, constant: -15).isActive = true
     
+        // Animate the entry of notification
         animateEntryExit(notificationView: notificationView, notificationTopAnchor: notificationTopAnchor)
-    
     }
+    
     
     private func animateEntryExit(notificationView: UIView, notificationTopAnchor: NSLayoutConstraint) {
         Vibration.success.vibrate()
+        // Slide down to show notification
         UIView.animate(withDuration: 0.3, animations: {
             notificationTopAnchor.constant = 8
             self.view.layoutIfNeeded()
         }) { (finished) in
             if finished {
-                
+                // Display notification for duration of the timer
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (_) in
-                     UIView.animate(withDuration: 0.3, animations: {
+                    // view will slide up when disappear
+                    UIView.animate(withDuration: 0.3, animations: {
                         notificationTopAnchor.constant = -100
                         self.view.layoutIfNeeded()
                      }) { (_) in
-                        
                         notificationView.removeFromSuperview()
-                        
                     }
                 }
             }
         }
     }
+    
     
 }
