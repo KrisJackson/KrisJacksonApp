@@ -29,7 +29,10 @@ class Blocked {
                 DispatchQueue.main.async {
                     // Present controller if user is blocked
                     if let isBlocked = snapshot.data()!["blocked"] as? Bool {
-                        if isBlocked { self.presentBlockedController() }
+                        if isBlocked {
+                            Vibration.error.vibrate()
+                            self.presentBlockedController()
+                        }
                     }
                 }
         }
