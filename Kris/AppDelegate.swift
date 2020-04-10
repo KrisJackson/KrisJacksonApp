@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Configure Firebase Messaging
         Messaging.messaging().delegate = self
         if #available(iOS 10.0, *) {
-          // For iOS 10 display notification (sent via APNS)
+          // For iOS 10 display notification 
         UNUserNotificationCenter.current().delegate = self
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
             UNUserNotificationCenter.current().requestAuthorization(
