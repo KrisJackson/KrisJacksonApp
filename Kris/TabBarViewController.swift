@@ -36,7 +36,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let imageView = UIImageView()
         imageView.image = logoImage
         imageView.tintColor = ColorTheme.white
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
