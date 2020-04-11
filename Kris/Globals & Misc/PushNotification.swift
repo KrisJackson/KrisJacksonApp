@@ -57,7 +57,9 @@ class PushNotificationManager: NSObject, MessagingDelegate, UNUserNotificationCe
 
 class PushNotificationSender {
     
-    static func sendPushNotification(to token: String, title: String?, body: String?) {
+    static func sendPushNotification(toToken token: String, title: String?, body: String?) {
+        guard let body = body else { return }
+        guard let title = title else { return }
         let urlString = "https://fcm.googleapis.com/fcm/send"
         let url = NSURL(string: urlString)!
         let paramString: [String : Any] = [

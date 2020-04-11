@@ -48,8 +48,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         // Reset badge after entering the app
         UIApplication.shared.applicationIconBadgeNumber = 0
+        
+        // Update token
+        updateFirestorePushTokenIfNeeded()
         return true
     }
+    
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -67,6 +72,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
       print(fcmToken)
+    }
+    
+    func updateFirestorePushTokenIfNeeded() {
+        guard let token = Messaging.messaging().fcmToken else { return }
+        let usersRef = Firestore.firestore().collection("devices")
+            .document(UIDevice.current.identifierForVendor!.uuidString)
+        usersRef.setData([
+            "token": token,
+            "appVersion": Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String,
+        ], merge: true)
     }
 }
 
@@ -87,5 +102,6 @@ extension AppDelegate {
     
 }
 
+let KRIS_TOKEN = "dj4kO9i5uU-EpUKbL8piC0:APA91bEPS_ibOPXEU1nJ56zGKteMzcbVJu51wYOUVM1EHDs2HPRebb0l9ZAkNOl4ceR_hpFkNgvGpQp2r9SgpDxPwtG_81OUEEbEreWfWJA51PUBnmm3dBG7yZAVJDg02Re2znxKujj3"
 
 

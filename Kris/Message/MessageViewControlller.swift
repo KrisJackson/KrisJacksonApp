@@ -348,9 +348,22 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
             "userID": UIDevice.current.identifierForVendor!.uuidString,
         ], merge: true) { (error) in
             DispatchQueue.main.async { completion(error) }
+            self.sendPushNotification(text: text)
         }
     }
     
+    private func sendPushNotification(text: String) {
+        Firestore.firestore().collection("devices")
+            .document(UIDevice.current.identifierForVendor!.uuidString)
+            .getDocument { (snapshot, error) in
+                guard let snapshot = snapshot else { return }
+                guard let first = snapshot.data()!["first"] as? String else { return }
+                guard let last = snapshot.data()!["last"] as? String else { return }
+                
+                // Send push notification to receiver
+                PushNotificationSender.sendPushNotification(toToken: KRIS_TOKEN, title: "\(first) \(last)", body: text)
+        }
+    }
     
     private func updateChannel(text: String, _ completion: @escaping (Error?) -> ()) {
         Firestore.firestore().collection("channels")
