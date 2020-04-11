@@ -49,8 +49,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         screenShot()
         
         // Present Notifications
-        getNewMessage()
-        getNewBlog()
+//        getNewMessage()
+//        getNewBlog()
     }
     
     override func viewWillAppear(_ animated: Bool) {
