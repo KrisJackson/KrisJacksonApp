@@ -21,7 +21,7 @@ extension TabBarViewController: GADBannerViewDelegate {
             let ad = GADBannerView(adSize: kGADAdSizeBanner)
             ad.load(GADRequest())
             ad.delegate = self
-            ad.adUnitID = testID
+            ad.adUnitID = productionID
             ad.rootViewController = self
             ad.backgroundColor = .clear
             ad.translatesAutoresizingMaskIntoConstraints = false

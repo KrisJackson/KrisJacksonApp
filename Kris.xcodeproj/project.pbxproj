@@ -26,7 +26,8 @@
 		186EA9EA2439097000282369 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9E92439097000282369 /* MessageCell.swift */; };
 		186EA9EC24396D6900282369 /* GetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9EB24396D6900282369 /* GetInfoViewController.swift */; };
 		186EA9EE24399A1500282369 /* MessageHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9ED24399A1500282369 /* MessageHeaderCell.swift */; };
-		189A584D2440F2D900CFB59B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189A584C2440F2D900CFB59B /* GoogleService-Info.plist */; };
+		187566832442442F00F62C7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187566822442442F00F62C7A /* GoogleService-Info.plist */; };
+		187566852442466900F62C7A /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187566842442466900F62C7A /* PushNotification.swift */; };
 		18E7D3C4243D490100FF8FBF /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7D3C3243D490100FF8FBF /* DeviceModel.swift */; };
 		18E7D3C6243D496000FF8FBF /* MapStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7D3C5243D496000FF8FBF /* MapStyle.swift */; };
 		18E7D3C8243D497B00FF8FBF /* Vibrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7D3C7243D497B00FF8FBF /* Vibrations.swift */; };
@@ -51,7 +52,6 @@
 		18EDACB82434D640004C11D8 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDACB72434D640004C11D8 /* LoadingViewController.swift */; };
 		18EDACBC2434FA88004C11D8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDACBB2434FA88004C11D8 /* PostCell.swift */; };
 		18EDACBE2435139B004C11D8 /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDACBD2435139B004C11D8 /* BlogCell.swift */; };
-		18F144C2243FCF6A009A688D /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F144C1243FCF6A009A688D /* PushNotification.swift */; };
 		18F3292E243CC753000C0B15 /* GoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3292D243CC753000C0B15 /* GoogleAds.swift */; };
 		18F32932243CC7DF000C0B15 /* DetectScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */; };
 		18F32934243CC854000C0B15 /* PresentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32933243CC854000C0B15 /* PresentNotification.swift */; };
@@ -98,7 +98,9 @@
 		186EA9E92439097000282369 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		186EA9EB24396D6900282369 /* GetInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoViewController.swift; sourceTree = "<group>"; };
 		186EA9ED24399A1500282369 /* MessageHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHeaderCell.swift; sourceTree = "<group>"; };
-		189A584C2440F2D900CFB59B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		187566822442442F00F62C7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		187566842442466900F62C7A /* PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		1875668624424A1200F62C7A /* Resume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Resume.entitlements; sourceTree = "<group>"; };
 		18E7D3C3243D490100FF8FBF /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		18E7D3C5243D496000FF8FBF /* MapStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyle.swift; sourceTree = "<group>"; };
 		18E7D3C7243D497B00FF8FBF /* Vibrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrations.swift; sourceTree = "<group>"; };
@@ -129,7 +131,6 @@
 		18EDACB72434D640004C11D8 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		18EDACBB2434FA88004C11D8 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		18EDACBD2435139B004C11D8 /* BlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCell.swift; sourceTree = "<group>"; };
-		18F144C1243FCF6A009A688D /* PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotification.swift; path = ../../../../Exchange/Exchange/Exchange/API/PushNotification.swift; sourceTree = "<group>"; };
 		18F3292D243CC753000C0B15 /* GoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAds.swift; sourceTree = "<group>"; };
 		18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectScreenShot.swift; sourceTree = "<group>"; };
 		18F32933243CC854000C0B15 /* PresentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentNotification.swift; sourceTree = "<group>"; };
@@ -256,7 +257,7 @@
 		18E7D3C2243D48CF00FF8FBF /* Globals & Misc */ = {
 			isa = PBXGroup;
 			children = (
-				18F144C1243FCF6A009A688D /* PushNotification.swift */,
+				187566842442466900F62C7A /* PushNotification.swift */,
 				18ED985A2426DEEB00F98C67 /* ColorTheme.swift */,
 				18E7D3C3243D490100FF8FBF /* DeviceModel.swift */,
 				18E7D3C5243D496000FF8FBF /* MapStyle.swift */,
@@ -301,6 +302,7 @@
 		18ED98252426D49900F98C67 /* Kris */ = {
 			isa = PBXGroup;
 			children = (
+				1875668624424A1200F62C7A /* Resume.entitlements */,
 				18ED98312426D49A00F98C67 /* LaunchScreen.storyboard */,
 				18ED982C2426D49900F98C67 /* Main.storyboard */,
 				189A58482440F08C00CFB59B /* Init */,
@@ -318,7 +320,7 @@
 				18E7D3C2243D48CF00FF8FBF /* Globals & Misc */,
 				18ED982F2426D49A00F98C67 /* Assets.xcassets */,
 				18ED98342426D49A00F98C67 /* Info.plist */,
-				189A584C2440F2D900CFB59B /* GoogleService-Info.plist */,
+				187566822442442F00F62C7A /* GoogleService-Info.plist */,
 			);
 			path = Kris;
 			sourceTree = "<group>";
@@ -507,7 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18ED98332426D49A00F98C67 /* LaunchScreen.storyboard in Resources */,
-				189A584D2440F2D900CFB59B /* GoogleService-Info.plist in Resources */,
+				187566832442442F00F62C7A /* GoogleService-Info.plist in Resources */,
 				18ED98302426D49A00F98C67 /* Assets.xcassets in Resources */,
 				18ED982E2426D49900F98C67 /* Main.storyboard in Resources */,
 			);
@@ -671,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187566852442466900F62C7A /* PushNotification.swift in Sources */,
 				18E7D3CD243D4A1B00FF8FBF /* Database.swift in Sources */,
 				18F3293A243CCA74000C0B15 /* TabBarSlideAnimation.swift in Sources */,
 				18E7D3CF243D4A5900FF8FBF /* Timestamp.swift in Sources */,
@@ -712,7 +715,6 @@
 				186EA9E2243658D200282369 /* LinkView.swift in Sources */,
 				182580B0242FD9D300A0317E /* ProjectsCell.swift in Sources */,
 				186EA9EE24399A1500282369 /* MessageHeaderCell.swift in Sources */,
-				18F144C2243FCF6A009A688D /* PushNotification.swift in Sources */,
 				18F3292E243CC753000C0B15 /* GoogleAds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,6 +889,7 @@
 			baseConfigurationReference = 753E2119420554CF88B8E55F /* Pods-Kris.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kris/Resume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = Kris/Info.plist;
@@ -906,6 +909,7 @@
 			baseConfigurationReference = EFA639ECEF99BC1E4B748F3D /* Pods-Kris.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kris/Resume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = Kris/Info.plist;

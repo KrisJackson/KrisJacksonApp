@@ -14,6 +14,7 @@ import GooglePlaces
 import GoogleMobileAds
 import DeviceCheck
 import SDWebImageLinkPlugin
+import UserNotifications
 
 
 @UIApplicationMain
