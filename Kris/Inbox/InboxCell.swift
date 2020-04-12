@@ -22,7 +22,7 @@ class InboxCell: UICollectionViewCell {
     
     let name: UILabel = {
         let label = UILabel()
-        label.textColor = ColorTheme.black
+        label.textColor = ColorTheme.blue
         label.font = .systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
