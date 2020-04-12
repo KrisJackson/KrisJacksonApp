@@ -48,6 +48,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     lazy var inbox: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(inboxImage, for: .normal)
+        button.alpha = 0
+        button.isEnabled = false
         button.layer.cornerRadius = 30
         button.tintColor = ColorTheme.white
         button.backgroundColor = ColorTheme.blue
