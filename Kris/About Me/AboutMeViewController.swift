@@ -28,7 +28,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
         user.linkedin = "https://linkedin.kristopherjackson.com"
         user.portfolio = "https://portfolio.kristopherjackson.com"
         user.instagram = "https://instagram.kristopherjackson.com"
-        user.resume = "https://resume.kristopherjackson.com"
+        user.resume = "https://firebasestorage.googleapis.com/v0/b/krisjackson-84f1b.appspot.com/o/Resume.pdf?alt=media"
         user.website = "https://www.kristopherjackson.com"
         user.stay = "Memphis, Tennessee"
         user.objective = "Computer Science major seeking a full-time position in iOS Development or Software Engineering starting in the Fall of 2021. I have more than three years of professional programming experience, two years working with an outstanding team as co-founder of Netswitch LLC, and I have spent the last two summers working at Dell Technologies as a Machine Learning Intern. I am a leader, and I intend build more leaders throughout my lifelong journey in the tech industry."
