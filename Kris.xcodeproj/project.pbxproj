@@ -28,6 +28,8 @@
 		186EA9EE24399A1500282369 /* MessageHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9ED24399A1500282369 /* MessageHeaderCell.swift */; };
 		187566832442442F00F62C7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187566822442442F00F62C7A /* GoogleService-Info.plist */; };
 		187566852442466900F62C7A /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187566842442466900F62C7A /* PushNotification.swift */; };
+		18CFF34A2442D6AF00D42016 /* InboxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFF3492442D6AF00D42016 /* InboxVC.swift */; };
+		18CFF34C2442D6C700D42016 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFF34B2442D6C700D42016 /* InboxCell.swift */; };
 		18E7D3C4243D490100FF8FBF /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7D3C3243D490100FF8FBF /* DeviceModel.swift */; };
 		18E7D3C6243D496000FF8FBF /* MapStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7D3C5243D496000FF8FBF /* MapStyle.swift */; };
 		18E7D3C8243D497B00FF8FBF /* Vibrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7D3C7243D497B00FF8FBF /* Vibrations.swift */; };
@@ -101,6 +103,8 @@
 		187566822442442F00F62C7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		187566842442466900F62C7A /* PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		1875668624424A1200F62C7A /* Resume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Resume.entitlements; sourceTree = "<group>"; };
+		18CFF3492442D6AF00D42016 /* InboxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxVC.swift; sourceTree = "<group>"; };
+		18CFF34B2442D6C700D42016 /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
 		18E7D3C3243D490100FF8FBF /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		18E7D3C5243D496000FF8FBF /* MapStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyle.swift; sourceTree = "<group>"; };
 		18E7D3C7243D497B00FF8FBF /* Vibrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibrations.swift; sourceTree = "<group>"; };
@@ -254,6 +258,15 @@
 			path = Init;
 			sourceTree = "<group>";
 		};
+		18CFF3482442D67C00D42016 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				18CFF3492442D6AF00D42016 /* InboxVC.swift */,
+				18CFF34B2442D6C700D42016 /* InboxCell.swift */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
 		18E7D3C2243D48CF00FF8FBF /* Globals & Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +320,7 @@
 				18ED982C2426D49900F98C67 /* Main.storyboard */,
 				189A58482440F08C00CFB59B /* Init */,
 				18F3292C243CC73B000C0B15 /* Tabbar */,
+				18CFF3482442D67C00D42016 /* Inbox */,
 				18ED98642427A18100F98C67 /* About Me */,
 				183BC286242B9D98006A01F8 /* Work */,
 				182580AB242E476200A0317E /* Skills */,
@@ -678,6 +692,7 @@
 				18F3293A243CCA74000C0B15 /* TabBarSlideAnimation.swift in Sources */,
 				18E7D3CF243D4A5900FF8FBF /* Timestamp.swift in Sources */,
 				18ED98592426DDB300F98C67 /* WorkViewController.swift in Sources */,
+				18CFF34A2442D6AF00D42016 /* InboxVC.swift in Sources */,
 				18F32934243CC854000C0B15 /* PresentNotification.swift in Sources */,
 				182580AE242FD85700A0317E /* ProjectsViewController.swift in Sources */,
 				18E7D3C8243D497B00FF8FBF /* Vibrations.swift in Sources */,
@@ -693,6 +708,7 @@
 				18E7D3C4243D490100FF8FBF /* DeviceModel.swift in Sources */,
 				182580B8243279E500A0317E /* LinkCell.swift in Sources */,
 				18E7D3CA243D49F200FF8FBF /* BlockedViewController.swift in Sources */,
+				18CFF34C2442D6C700D42016 /* InboxCell.swift in Sources */,
 				18E7D3C6243D496000FF8FBF /* MapStyle.swift in Sources */,
 				18E7D3D1243D4AAD00FF8FBF /* RecordDevice.swift in Sources */,
 				18ED98292426D49900F98C67 /* SceneDelegate.swift in Sources */,
