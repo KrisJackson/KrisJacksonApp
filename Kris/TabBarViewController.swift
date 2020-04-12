@@ -21,6 +21,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     var inboxBottom: NSLayoutConstraint!
     
+    var hasInbox = false
+    
     let headerView: UIView = {
         let view = UIView()
         view.backgroundColor = ColorTheme.blue
@@ -51,6 +53,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         button.backgroundColor = ColorTheme.blue
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(goToInbox), for: .touchUpInside)
+        button.addTarget(self, action: #selector(hideInbox), for: .touchDragExit)
         
         // Tabbar shadow
         button.layer.shadowRadius = 3
@@ -132,6 +135,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         logo.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -8).isActive = true
         logo.topAnchor.constraint(equalTo: headerView.layoutMarginsGuide.topAnchor, constant: 8).isActive = true
         headerHeight = (8 * 2) + 30
+        
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showInbox))
+        headerView.addGestureRecognizer(tap)
     }
     
     private func configureInboxButton() {
@@ -144,11 +151,30 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
             inbox.rightAnchor.constraint(equalTo: tabBar.rightAnchor, constant: -16).isActive = true
             inboxBottom = inbox.bottomAnchor.constraint(equalTo: tabBar.topAnchor, constant: -16)
             inboxBottom.isActive = true
+            hasInbox = true
         }
     }
     
     @objc func goToInbox() {
         self.performSegue(withIdentifier: "goToInbox", sender: self)
+    }
+    
+    @objc private func hideInbox() {
+        if (hasInbox) {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.inbox.alpha = 0
+                self.inbox.isEnabled = false
+            }, completion: nil)
+        }
+    }
+    
+    @objc private func showInbox() {
+        if (hasInbox) {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.inbox.alpha = 1
+                self.inbox.isEnabled = true
+            }, completion: nil)
+        }
     }
 }
 
