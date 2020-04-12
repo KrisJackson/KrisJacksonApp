@@ -64,7 +64,7 @@ class InboxCell: UICollectionViewCell {
         lbl.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         addSubview(view)
-        view.topAnchor.constraint(equalTo: topAnchor, constant: 0.5).isActive = true
+        view.topAnchor.constraint(equalTo: topAnchor).isActive = true
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -0.5).isActive = true
