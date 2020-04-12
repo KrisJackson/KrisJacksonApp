@@ -30,7 +30,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
     let backgroundImage: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 18
+        imageView.layer.cornerRadius = 0
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = ColorTheme.aboutMeBackgroundView
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -160,7 +160,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
     
     let objectiveBackground: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 8
+        view.layer.cornerRadius = 12
         view.backgroundColor = ColorTheme.aboutMeObjectiveBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -243,10 +243,10 @@ class AboutMeHeaderCell: UICollectionViewCell {
         view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         view.addSubview(backgroundImage)
-        backgroundImage.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        backgroundImage.heightAnchor.constraint(equalToConstant: 220).isActive = true
+        backgroundImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImage.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         backgroundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        backgroundImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
-        backgroundImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         
         view.addSubview(profilePictureImage)
         profilePictureImage.heightAnchor.constraint(equalToConstant: 200).isActive = true
@@ -261,18 +261,18 @@ class AboutMeHeaderCell: UICollectionViewCell {
         phoneButton.centerXAnchor.constraint(equalTo: profilePictureImage.rightAnchor, constant: -35).isActive = true
         
         view.addSubview(fullNameLabel)
+        fullNameLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30).isActive = true
         fullNameLabel.centerXAnchor.constraint(equalTo: backgroundImage.centerXAnchor).isActive = true
-        fullNameLabel.leftAnchor.constraint(equalTo: backgroundImage.leftAnchor, constant: 10).isActive = true
         fullNameLabel.topAnchor.constraint(equalTo: profilePictureImage.bottomAnchor, constant: 12).isActive = true
         
         view.addSubview(descLabel)
-        descLabel.leftAnchor.constraint(equalTo: backgroundImage.leftAnchor).isActive = true
+        descLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         descLabel.centerXAnchor.constraint(equalTo: backgroundImage.centerXAnchor).isActive = true
         descLabel.topAnchor.constraint(equalTo: fullNameLabel.bottomAnchor, constant: 6).isActive = true
         
         view.addSubview(websiteBackground)
         websiteBackground.heightAnchor.constraint(equalToConstant: 42).isActive = true
-        websiteBackground.leftAnchor.constraint(equalTo: backgroundImage.leftAnchor).isActive = true
+        websiteBackground.leftAnchor.constraint(equalTo: descLabel.leftAnchor).isActive = true
         websiteBackground.topAnchor.constraint(equalTo: descLabel.bottomAnchor, constant: 24).isActive = true
         
         websiteBackground.addSubview(websiteContainer)
@@ -300,20 +300,20 @@ class AboutMeHeaderCell: UICollectionViewCell {
         
         view.addSubview(instagramButton)
         instagramButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        instagramButton.rightAnchor.constraint(equalTo: backgroundImage.rightAnchor).isActive = true
+        instagramButton.rightAnchor.constraint(equalTo: descLabel.rightAnchor).isActive = true
         instagramButton.heightAnchor.constraint(equalTo: websiteBackground.heightAnchor).isActive = true
         instagramButton.centerYAnchor.constraint(equalTo: websiteBackground.centerYAnchor).isActive = true
         instagramButton.leftAnchor.constraint(equalTo: linkedInButton.rightAnchor, constant: 6).isActive = true
         
         view.addSubview(separatorView)
         separatorView.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
-        separatorView.leftAnchor.constraint(equalTo: backgroundImage.leftAnchor).isActive = true
-        separatorView.centerXAnchor.constraint(equalTo: backgroundImage.centerXAnchor).isActive = true
+        separatorView.leftAnchor.constraint(equalTo: descLabel.leftAnchor).isActive = true
+        separatorView.centerXAnchor.constraint(equalTo: descLabel.centerXAnchor).isActive = true
         separatorView.topAnchor.constraint(equalTo: websiteBackground.bottomAnchor, constant: 12).isActive = true
         
         view.addSubview(objectiveBackground)
         objectiveBackground.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        objectiveBackground.leftAnchor.constraint(equalTo: backgroundImage.leftAnchor).isActive = true
+        objectiveBackground.leftAnchor.constraint(equalTo: descLabel.leftAnchor).isActive = true
         objectiveBackground.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 15).isActive = true
         
         objectiveBackground.addSubview(objectiveHeaderLabel)
@@ -341,8 +341,8 @@ class AboutMeHeaderCell: UICollectionViewCell {
         
         view.addSubview(separatorView2)
         separatorView2.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
-        separatorView2.leftAnchor.constraint(equalTo: backgroundImage.leftAnchor).isActive = true
-        separatorView2.centerXAnchor.constraint(equalTo: backgroundImage.centerXAnchor).isActive = true
+        separatorView2.leftAnchor.constraint(equalTo: descLabel.leftAnchor).isActive = true
+        separatorView2.centerXAnchor.constraint(equalTo: descLabel.centerXAnchor).isActive = true
         separatorView2.topAnchor.constraint(equalTo: objectiveBackground.bottomAnchor, constant: 15).isActive = true
         separatorView2.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
