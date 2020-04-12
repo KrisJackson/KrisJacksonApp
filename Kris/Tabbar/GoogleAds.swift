@@ -54,13 +54,12 @@ extension TabBarViewController: GADBannerViewDelegate {
     
     /// Tells the delegate an ad request loaded an ad.
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        // Animated enterance of ad
+//         Animated enterance of ad
         bannerView.alpha = 0
         UIView.animate(withDuration: 1, animations: {
             bannerView.alpha = 1
         })
     }
-
 
     /// Tells the delegate an ad request failed.
     func adView(_ bannerView: GADBannerView,

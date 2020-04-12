@@ -22,18 +22,9 @@
                                     <constraint firstAttribute="height" constant="60" id="JW6-vk-CtS"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed and designed by Kristopher Jackson" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoI-u4-cc7">
-                                <rect key="frame" x="50" y="808.5" width="314" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.21941938999999999" green="0.45783454179999999" blue="0.91377025840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.075117968019999995" green="0.46232306960000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xoI-u4-cc7" secondAttribute="bottom" constant="20" id="1dY-rY-uzd"/>
-                            <constraint firstItem="xoI-u4-cc7" firstAttribute="width" secondItem="dFE-UU-a7s" secondAttribute="width" id="7XH-Th-kaM"/>
-                            <constraint firstItem="xoI-u4-cc7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Aup-83-mmr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dFE-UU-a7s" secondAttribute="trailing" constant="50" id="HAg-yN-lQe"/>
                             <constraint firstItem="dFE-UU-a7s" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UId-ri-711"/>
                             <constraint firstItem="dFE-UU-a7s" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="f2p-v7-X82"/>

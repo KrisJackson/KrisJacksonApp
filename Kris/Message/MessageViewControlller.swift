@@ -106,6 +106,7 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
         super.viewWillAppear(true)
         if let tabbarController = tabBarController as? TabBarViewController {
             tabbarController.tabBar.layer.shadowColor = UIColor.clear.cgColor
+            tabbarController.inbox.isHidden = true
         }
         let blocked = Blocked(target: self)
         blocked.isBlocked()
@@ -115,6 +116,7 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
         super.viewWillDisappear(true)
         if let tabbarController = tabBarController as? TabBarViewController {
             tabbarController.tabBar.layer.shadowColor = ColorTheme.tabBarShadowColor.cgColor
+            tabbarController.inbox.isHidden = false
         }
     }
     

@@ -30,8 +30,6 @@ pod 'FirebaseUI/Firestore'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
 
-pod "YoutubePlayer-in-WKWebView"
-
 pod 'SDWebImageLinkPlugin'
 pod 'SwiftLinkPreview'
 pod 'Google-Mobile-Ads-SDK'

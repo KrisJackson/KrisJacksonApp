@@ -324,14 +324,13 @@ PODS:
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
-  - SDWebImage (5.7.1):
-    - SDWebImage/Core (= 5.7.1)
-  - SDWebImage/Core (5.7.1)
+  - SDWebImage (5.7.2):
+    - SDWebImage/Core (= 5.7.2)
+  - SDWebImage/Core (5.7.2)
   - SDWebImageLinkPlugin (0.3.0):
     - SDWebImage (~> 5.4)
   - SwiftKeychainWrapper (3.4.0)
   - SwiftLinkPreview (3.1.0)
-  - YoutubePlayer-in-WKWebView (0.3.4)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -349,7 +348,6 @@ DEPENDENCIES:
   - SDWebImageLinkPlugin
   - SwiftKeychainWrapper
   - SwiftLinkPreview
-  - YoutubePlayer-in-WKWebView
 
 SPEC REPOS:
   trunk:
@@ -388,7 +386,6 @@ SPEC REPOS:
     - SDWebImageLinkPlugin
     - SwiftKeychainWrapper
     - SwiftLinkPreview
-    - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -422,12 +419,11 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
-  SDWebImage: 5d4cf6afccd9ac1d2ee701ed0c4917cbb1b80536
+  SDWebImage: d9ea4959d99c52276dfada481987018fcaea3d58
   SDWebImageLinkPlugin: 0c615c44341027dd8e3dc2ba9292ba52938637bd
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
   SwiftLinkPreview: 3d924eeaae8d17410a827a4b37675713af1a0a8a
-  YoutubePlayer-in-WKWebView: af2f5929fc78882d94bfdfeea999b661b78d9717
 
-PODFILE CHECKSUM: 5abd38e1214a036cbcdfaa2e23e81ec364433a66
+PODFILE CHECKSUM: 2b6e150dafa28ab43644021bbbde696945a69cba
 
 COCOAPODS: 1.9.1

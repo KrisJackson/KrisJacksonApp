@@ -174,11 +174,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>YoutubePlayer-in-WKWebView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>abseil.xcscheme</key>
 		<dict>
 			<key>isShown</key>

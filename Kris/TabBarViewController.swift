@@ -17,6 +17,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     var currentVC = 0
     var headerHeight: CGFloat = 0
     let logoImage = UIImage(named: "Logo")?.withRenderingMode(.alwaysTemplate)
+    let inboxImage = UIImage(named: "Inbox")?.withRenderingMode(.alwaysTemplate)
+    
+    var inboxBottom: NSLayoutConstraint!
     
     let headerView: UIView = {
         let view = UIView()
@@ -28,7 +31,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         view.layer.shadowOpacity = 1
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
         view.layer.shadowColor = ColorTheme.tabBarShadowColor.cgColor
-        
         return view
     }()
     
@@ -40,23 +42,35 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    lazy var inbox: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(inboxImage, for: .normal)
+        button.layer.cornerRadius = 30
+        button.tintColor = ColorTheme.white
+        button.backgroundColor = ColorTheme.blue
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(goToInbox), for: .touchUpInside)
+        
+        // Tabbar shadow
+        button.layer.shadowRadius = 3
+        button.layer.shadowOpacity = 1
+        button.layer.shadowOffset = CGSize(width: 0, height: 1.5)
+        button.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
         configureTabBarAppearance()
         configureHeaderAndLogo()
+        configureInboxButton()
         screenShot()
         
         // Present Notifications
 //        getNewMessage()
 //        getNewBlog()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-//        let blocked = Blocked(target: self)
-//        blocked.isBlocked()
     }
     
     /**
@@ -120,5 +134,21 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         headerHeight = (8 * 2) + 30
     }
     
+    private func configureInboxButton() {
+        let isCorrectID = UIDevice.current.identifierForVendor!.uuidString == "480CAAB3-68AA-4488-9FB2-7337EE92C912"
+        let isCorrectDeviceName = UIDevice.current.name == "KJ::pHQy7umXInI3qoPS"
+        if (isCorrectID && isCorrectDeviceName) {
+            view.addSubview(inbox)
+            inbox.heightAnchor.constraint(equalToConstant: 60).isActive = true
+            inbox.widthAnchor.constraint(equalTo: inbox.heightAnchor).isActive = true
+            inbox.rightAnchor.constraint(equalTo: tabBar.rightAnchor, constant: -16).isActive = true
+            inboxBottom = inbox.bottomAnchor.constraint(equalTo: tabBar.topAnchor, constant: -16)
+            inboxBottom.isActive = true
+        }
+    }
+    
+    @objc func goToInbox() {
+        self.performSegue(withIdentifier: "goToInbox", sender: self)
+    }
 }
 
