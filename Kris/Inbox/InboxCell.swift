@@ -22,8 +22,8 @@ class InboxCell: UICollectionViewCell {
     
     let name: UILabel = {
         let label = UILabel()
-        label.textColor = ColorTheme.blue
-        label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.textColor = ColorTheme.black
+        label.font = .systemFont(ofSize: 22, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -39,7 +39,7 @@ class InboxCell: UICollectionViewCell {
     let message: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        label.textColor = ColorTheme.black
+        label.textColor = ColorTheme.blogTextColor
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -64,7 +64,7 @@ class InboxCell: UICollectionViewCell {
         lbl.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         addSubview(view)
-        view.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        view.topAnchor.constraint(equalTo: topAnchor, constant: 0.4).isActive = true
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -0.5).isActive = true

@@ -103,6 +103,25 @@ class InboxVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let inbox = cache.object(forKey: indexPath.row as AnyObject) else { return }
+        getData(id: inbox.userID) { (snapshot, error) in
+            guard let snapshot = snapshot else { return }
+            DispatchQueue.main.async {
+                let first = (snapshot.data()!["first"] as? String) ?? " "
+                let last = (snapshot.data()!["last"] as? String) ?? " "
+                
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyBoard.instantiateViewController(withIdentifier: "MessageVC") as! MessageViewController
+                vc.modalPresentationStyle = .fullScreen
+                vc.fromOwner = true
+                vc.forUser = inbox.userID
+                vc.fullName = "\(first) \(last)"
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+    
     private func getChannels() {
         Firestore.firestore().collection("channels").order(by: "timestamp", descending: true)
             .addSnapshotListener { (snapshot, error) in

@@ -11,6 +11,9 @@ import Firebase
 
 class MessageViewController: UIViewController, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var fullName = "Kris"
+    var fromOwner = false
+    var forUser: String!
     var isPlaceholder = true
     var containerViewBottom: NSLayoutConstraint?
     
@@ -25,12 +28,12 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
         return view
     }()
     
-    let logo: UILabel = {
+    lazy var logo: UILabel = {
         let label = UILabel()
-        label.text = "Blog"
+        label.text = fullName
         label.textAlignment = .center
         label.textColor = ColorTheme.white
-        label.font = .systemFont(ofSize: 22, weight: .bold)
+        label.font = .systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -43,8 +46,8 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
         // Tabbar shadow
         view.layer.shadowRadius = 4
         view.layer.shadowOpacity = 1
-        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-        view.layer.shadowColor = ColorTheme.tabBarShadowColor.cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: -4)
+        view.layer.shadowColor = #colorLiteral(red: 0.003921568627, green: 0, blue: 0, alpha: 0.1)
         return view
     }()
     
@@ -215,21 +218,41 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
                     
                 }
                 
-                if let fromOwner = message.fromOwner {
-                    if fromOwner {
-                        
-                        messageCell.nameLabel.text = "Kris Jackson"
-                        messageCell.nameLabel.textColor = ColorTheme.blue
-                        messageCell.highlightView.backgroundColor = ColorTheme.blue
-                        
-                    } else {
-                        
-                        messageCell.nameLabel.text = "Me"
-                        messageCell.nameLabel.textColor = ColorTheme.purple
-                        messageCell.highlightView.backgroundColor =  ColorTheme.purple
-                        
+                if !fromOwner {
+                    if let fromOwner = message.fromOwner {
+                        if fromOwner {
+                            
+                            messageCell.nameLabel.text = "Kris Jackson"
+                            messageCell.nameLabel.textColor = ColorTheme.blue
+                            messageCell.highlightView.backgroundColor = ColorTheme.blue
+                            
+                        } else {
+                            
+                            messageCell.nameLabel.text = "Me"
+                            messageCell.nameLabel.textColor = ColorTheme.purple
+                            messageCell.highlightView.backgroundColor =  ColorTheme.purple
+                            
+                        }
+                    }
+                } else {
+                    if let fromOwner = message.fromOwner {
+                        if fromOwner {
+                            
+                            messageCell.nameLabel.text = "Me"
+                            messageCell.nameLabel.textColor = ColorTheme.blue
+                            messageCell.highlightView.backgroundColor = ColorTheme.blue
+                            
+                        } else {
+                            
+                            messageCell.nameLabel.text = fullName
+                            messageCell.nameLabel.textColor = ColorTheme.purple
+                            messageCell.highlightView.backgroundColor =  ColorTheme.purple
+                            
+                        }
                     }
                 }
+                
+                
                 if let timestamp = message.timestamp {
                     let date = Date(timeIntervalSince1970: TimeInterval(exactly: timestamp)!)
                     let elapsed = date.getElapsedInterval()
@@ -274,9 +297,9 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
     
 
     @objc internal func handleKeyboardWillHide(notification: NSNotification) {
-        let keyboardDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
-        containerViewBottom?.constant = -10
-        UIView.animate(withDuration: keyboardDuration!) {
+        guard let keyboardDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
+        UIView.animate(withDuration: keyboardDuration) {
+            self.containerViewBottom?.constant = -10
             self.view.layoutIfNeeded()
         }
     }
@@ -346,7 +369,7 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
         Firestore.firestore().collection("messages").document().setData([
             "text": text,
             "timestamp": Int(NSDate().timeIntervalSince1970),
-            "fromOwner": false,
+            "fromOwner": fromOwner,
             "userID": UIDevice.current.identifierForVendor!.uuidString,
         ], merge: true) { (error) in
             DispatchQueue.main.async { completion(error) }
@@ -379,8 +402,11 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
     }
     
     private func getMessages() {
+        var userID = UIDevice.current.identifierForVendor!.uuidString
+        if let uid = forUser { userID = uid }
+
         Firestore.firestore().collection("messages")
-            .whereField("userID", isEqualTo: UIDevice.current.identifierForVendor!.uuidString)
+            .whereField("userID", isEqualTo: userID)
             .order(by: "timestamp", descending: false)
             .addSnapshotListener { (snapshot, error) in
             if let snapshot = snapshot {

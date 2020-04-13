@@ -75,7 +75,7 @@ class MessageCell: UICollectionViewCell {
         addSubview(view)
         view.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        view.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22).isActive = true
         
         view.addSubview(highlightView)

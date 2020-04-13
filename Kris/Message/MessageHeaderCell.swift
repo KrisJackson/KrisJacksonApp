@@ -87,6 +87,7 @@ class MessageHeaderCell: UICollectionViewCell {
         text.rightAnchor.constraint(equalTo: header.rightAnchor).isActive = true
         text.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 2).isActive = true
         text.bottomAnchor.constraint(equalTo: backView.bottomAnchor, constant: -20).isActive = true
+        
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {

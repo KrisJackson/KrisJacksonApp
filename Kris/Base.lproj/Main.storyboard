@@ -150,6 +150,21 @@
             </objects>
             <point key="canvasLocation" x="-20.289855072463769" y="-1493.3035714285713"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="pgP-pq-4XE">
+            <objects>
+                <viewController id="bNx-AB-LLA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7vE-vy-AFd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1Y3-7L-0gE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yCo-ZK-gNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="-1493"/>
+        </scene>
         <!--Blocked View Controller-->
         <scene sceneID="BVi-WL-AgQ">
             <objects>
@@ -206,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjd-HD-cRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1147.8260869565217" y="-1920.5357142857142"/>
+            <point key="canvasLocation" x="-914" y="-2204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ut4-pl-NIz">
