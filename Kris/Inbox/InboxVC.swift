@@ -90,8 +90,8 @@ class InboxVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         getData(id: inbox.userID) { (snapshot, error) in
             guard let snapshot = snapshot else { return }
             DispatchQueue.main.async {
-                let first = (snapshot.data()!["first"] as? String) ?? " "
-                let last = (snapshot.data()!["last"] as? String) ?? " "
+                let first = (snapshot.data()!["first"] as? String) ?? "{NULL}"
+                let last = (snapshot.data()!["last"] as? String) ?? "{NULL}"
                 cell.name.text = "\(first) \(last)"
             }
         }
@@ -108,15 +108,18 @@ class InboxVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         getData(id: inbox.userID) { (snapshot, error) in
             guard let snapshot = snapshot else { return }
             DispatchQueue.main.async {
-                let first = (snapshot.data()!["first"] as? String) ?? "[NULL]"
-                let last = (snapshot.data()!["last"] as? String) ?? "[NULL]"
+                let first = (snapshot.data()!["first"] as? String) ?? "{NULL}"
+                let last = (snapshot.data()!["last"] as? String) ?? "{NULL}"
+                let token = (snapshot.data()!["token"] as? String) ?? ""
                 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyBoard.instantiateViewController(withIdentifier: "MessageVC") as! MessageViewController
                 vc.modalPresentationStyle = .fullScreen
+                vc.token = token
                 vc.fromOwner = true
                 vc.forUser = inbox.userID
                 vc.fullName = "\(first) \(last)"
+                vc.channelID = snapshot.documentID
                 self.present(vc, animated: true, completion: nil)
             }
         }

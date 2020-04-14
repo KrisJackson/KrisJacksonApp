@@ -15,6 +15,8 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
     var fromOwner = false
     var forUser: String!
     var isPlaceholder = true
+    var token = KRIS_TOKEN
+    var channelID = UIDevice.current.identifierForVendor!.uuidString
     var containerViewBottom: NSLayoutConstraint?
     
     var num = Int()
@@ -385,7 +387,7 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
             "text": text,
             "timestamp": Int(NSDate().timeIntervalSince1970),
             "fromOwner": fromOwner,
-            "userID": UIDevice.current.identifierForVendor!.uuidString,
+            "userID": channelID,
         ], merge: true) { (error) in
             DispatchQueue.main.async { completion(error) }
             self.sendPushNotification(text: text)
@@ -401,13 +403,13 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
                 guard let last = snapshot.data()!["last"] as? String else { return }
                 
                 // Send push notification to receiver
-                PushNotificationSender.sendPushNotification(toToken: KRIS_TOKEN, title: "\(first) \(last)", body: text)
+                PushNotificationSender.sendPushNotification(toToken: self.token, title: "\(first) \(last)", body: text)
         }
     }
     
     private func updateChannel(text: String, _ completion: @escaping (Error?) -> ()) {
         Firestore.firestore().collection("channels")
-            .document(UIDevice.current.identifierForVendor!.uuidString).setData([
+            .document(channelID).setData([
                 "lastMessage": text,
                 "timestamp": Int(NSDate().timeIntervalSince1970),
                 "fromOwner": false
