@@ -51,6 +51,17 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
         return view
     }()
     
+    lazy var cancel: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Cancel", for: .normal)
+        button.setTitleColor(ColorTheme.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
+//        button.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(dismissPage), for: .touchUpInside)
+        return button
+    }()
+    
     let textContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 20
@@ -137,6 +148,10 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
         logo.leftAnchor.constraint(equalTo: headerView.leftAnchor, constant: 20).isActive = true
         logo.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -8).isActive = true
         logo.topAnchor.constraint(equalTo: headerView.layoutMarginsGuide.topAnchor, constant: 8).isActive = true
+        
+        headerView.addSubview(cancel)
+        cancel.centerYAnchor.constraint(equalTo: logo.centerYAnchor).isActive = true
+        cancel.leftAnchor.constraint(equalTo: headerView.leftAnchor, constant: 12).isActive = true
     }
     
     private func configureCollectionView() {
@@ -429,6 +444,10 @@ class MessageViewController: UIViewController, UITextViewDelegate, UICollectionV
                 self.collectionView.scrollToItem(at: lastItemIndex as IndexPath, at: .bottom, animated: true)
             }
         }
+    }
+    
+    @objc private func dismissPage() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

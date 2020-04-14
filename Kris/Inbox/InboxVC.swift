@@ -108,8 +108,8 @@ class InboxVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         getData(id: inbox.userID) { (snapshot, error) in
             guard let snapshot = snapshot else { return }
             DispatchQueue.main.async {
-                let first = (snapshot.data()!["first"] as? String) ?? " "
-                let last = (snapshot.data()!["last"] as? String) ?? " "
+                let first = (snapshot.data()!["first"] as? String) ?? "[NULL]"
+                let last = (snapshot.data()!["last"] as? String) ?? "[NULL]"
                 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyBoard.instantiateViewController(withIdentifier: "MessageVC") as! MessageViewController
@@ -117,7 +117,7 @@ class InboxVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
                 vc.fromOwner = true
                 vc.forUser = inbox.userID
                 vc.fullName = "\(first) \(last)"
-                self.navigationController?.pushViewController(vc, animated: true)
+                self.present(vc, animated: true, completion: nil)
             }
         }
     }

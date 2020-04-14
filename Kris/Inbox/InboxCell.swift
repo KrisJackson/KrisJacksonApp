@@ -23,15 +23,16 @@ class InboxCell: UICollectionViewCell {
     let name: UILabel = {
         let label = UILabel()
         label.textColor = ColorTheme.black
-        label.font = .systemFont(ofSize: 22, weight: .bold)
+        label.font = .systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let date: UILabel = {
         let label = UILabel()
+        label.textAlignment = .right
         label.textColor = ColorTheme.jobText
-        label.font = .systemFont(ofSize: 16, weight: .regular)
+        label.font = .systemFont(ofSize: 14, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -39,7 +40,7 @@ class InboxCell: UICollectionViewCell {
     let message: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        label.textColor = ColorTheme.blogTextColor
+        label.textColor = ColorTheme.jobText
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -73,17 +74,16 @@ class InboxCell: UICollectionViewCell {
         name.heightAnchor.constraint(greaterThanOrEqualToConstant: 24).isActive = true
         name.topAnchor.constraint(equalTo: view.topAnchor, constant: 15).isActive = true
         name.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        name.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         
         view.addSubview(date)
-        date.heightAnchor.constraint(greaterThanOrEqualToConstant: 18).isActive = true
-        date.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 2).isActive = true
-        date.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        date.topAnchor.constraint(equalTo: name.topAnchor).isActive = true
+        date.centerYAnchor.constraint(equalTo: name.centerYAnchor).isActive = true
+        date.leftAnchor.constraint(equalTo: name.rightAnchor, constant: 5).isActive = true
         date.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         
         view.addSubview(message)
         message.heightAnchor.constraint(greaterThanOrEqualToConstant: 20).isActive = true
-        message.topAnchor.constraint(equalTo: date.bottomAnchor, constant: 12).isActive = true
+        message.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 5).isActive = true
         message.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         message.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         message.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15).isActive = true
