@@ -186,7 +186,7 @@ class InterestsViewController: UIViewController, UICollectionViewDelegate, UICol
             return headerCell
         }
         
-        if let link: Link = blogs.object(forKey: indexPath.row - (3 + bookNum + albumNum) as AnyObject) {
+        if let link: Link = blogs.object(forKey: indexPath.row - (2 + bookNum + albumNum) as AnyObject) {
             let linkview = LinkView(metadata: link.meta)
             
 //            // View shadow
