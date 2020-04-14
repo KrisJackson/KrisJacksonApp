@@ -21,7 +21,13 @@ class InterestsViewController: UIViewController, UICollectionViewDelegate, UICol
     let blogs = NSCache<AnyObject, Link>()
     let videos = NSCache<AnyObject, Link>()
     
-    let blogsString = ["https://ai.googleblog.com/2019/10/quantum-supremacy-using-programmable.html", "https://blog.google/technology/health/improving-breast-cancer-screening/", "https://blogs.microsoft.com/blog/2020/01/16/microsoft-will-be-carbon-negative-by-2030/", "https://www.ibm.com/blogs/research/2020/01/huntingtons-disease-research-using-ai/", "https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https/", "https://ai.googleblog.com/2019/10/learning-to-smell-using-deep-learning.html"]
+    let blogsString = [
+        "https://ai.googleblog.com/2019/10/quantum-supremacy-using-programmable.html",
+        "https://blog.google/technology/health/improving-breast-cancer-screening/",
+        "https://blogs.microsoft.com/blog/2020/01/16/microsoft-will-be-carbon-negative-by-2030/",
+        "https://www.ibm.com/blogs/research/2020/01/huntingtons-disease-research-using-ai/",
+        "https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https/",
+        "https://ai.googleblog.com/2019/10/learning-to-smell-using-deep-learning.html"]
     
     fileprivate(set) var collectionView: UICollectionView
     
@@ -107,7 +113,7 @@ class InterestsViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bookNum + albumNum + blogsString.count + 3
+        return bookNum + albumNum + blogsString.count + 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -186,7 +192,7 @@ class InterestsViewController: UIViewController, UICollectionViewDelegate, UICol
             return headerCell
         }
         
-        if let link: Link = blogs.object(forKey: indexPath.row - (2 + bookNum + albumNum) as AnyObject) {
+        if let link: Link = blogs.object(forKey: indexPath.row - (3 + bookNum + albumNum) as AnyObject) {
             let linkview = LinkView(metadata: link.meta)
             
 //            // View shadow
