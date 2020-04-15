@@ -17,6 +17,8 @@ import SDWebImageLinkPlugin
 import UserNotifications
 
 
+/// MAIN BRANCH
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
 
