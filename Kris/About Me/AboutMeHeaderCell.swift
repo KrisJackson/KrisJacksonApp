@@ -182,7 +182,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
         label.numberOfLines = 1000
         label.textAlignment = .left
         label.textColor = ColorTheme.aboutMeDescriptionText
-        label.font = .systemFont(ofSize: 17, weight: .regular)
+        label.font = .systemFont(ofSize: 16, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -324,7 +324,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
         objectiveBackground.addSubview(objectiveLabel)
         objectiveLabel.leftAnchor.constraint(equalTo: objectiveHeaderLabel.leftAnchor).isActive = true
         objectiveLabel.centerXAnchor.constraint(equalTo: objectiveHeaderLabel.centerXAnchor).isActive = true
-        objectiveLabel.topAnchor.constraint(equalTo: objectiveHeaderLabel.bottomAnchor, constant: 10).isActive = true
+        objectiveLabel.topAnchor.constraint(equalTo: objectiveHeaderLabel.bottomAnchor, constant: 5).isActive = true
         
         objectiveBackground.addSubview(emailButton)
         emailButton.heightAnchor.constraint(equalToConstant: 42).isActive = true
