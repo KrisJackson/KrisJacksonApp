@@ -22,6 +22,7 @@
 		183BC2852428D357006A01F8 /* AboutMeEducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BC2842428D357006A01F8 /* AboutMeEducationCell.swift */; };
 		183BC288242B9E45006A01F8 /* WorkHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BC287242B9E45006A01F8 /* WorkHeaderCell.swift */; };
 		183BC28A242BA4B2006A01F8 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BC289242BA4B2006A01F8 /* JobCell.swift */; };
+		1863D0BE2449FE1800A3608D /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D0BD2449FE1800A3608D /* JobData.swift */; };
 		186EA9E2243658D200282369 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9E1243658D200282369 /* LinkView.swift */; };
 		186EA9EA2439097000282369 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9E92439097000282369 /* MessageCell.swift */; };
 		186EA9EC24396D6900282369 /* GetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9EB24396D6900282369 /* GetInfoViewController.swift */; };
@@ -96,6 +97,7 @@
 		183BC2842428D357006A01F8 /* AboutMeEducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeEducationCell.swift; sourceTree = "<group>"; };
 		183BC287242B9E45006A01F8 /* WorkHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHeaderCell.swift; sourceTree = "<group>"; };
 		183BC289242BA4B2006A01F8 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
+		1863D0BD2449FE1800A3608D /* JobData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
 		186EA9E1243658D200282369 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		186EA9E92439097000282369 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		186EA9EB24396D6900282369 /* GetInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +114,7 @@
 		18E7D3CC243D4A1B00FF8FBF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		18E7D3CE243D4A5900FF8FBF /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
 		18E7D3D0243D4AAD00FF8FBF /* RecordDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDevice.swift; sourceTree = "<group>"; };
-		18ED98232426D49900F98C67 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18ED98232426D49900F98C67 /* Hire Kris!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hire Kris!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ED98262426D49900F98C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18ED98282426D49900F98C67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18ED982A2426D49900F98C67 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				187566842442466900F62C7A /* PushNotification.swift */,
+				1863D0BD2449FE1800A3608D /* JobData.swift */,
 				18ED985A2426DEEB00F98C67 /* ColorTheme.swift */,
 				18E7D3C3243D490100FF8FBF /* DeviceModel.swift */,
 				18E7D3C5243D496000FF8FBF /* MapStyle.swift */,
@@ -305,7 +308,7 @@
 		18ED98242426D49900F98C67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18ED98232426D49900F98C67 /* Resume.app */,
+				18ED98232426D49900F98C67 /* Hire Kris!.app */,
 				18ED98392426D49A00F98C67 /* KrisTests.xctest */,
 				18ED98442426D49A00F98C67 /* KrisUITests.xctest */,
 			);
@@ -431,7 +434,7 @@
 			);
 			name = Kris;
 			productName = Kris;
-			productReference = 18ED98232426D49900F98C67 /* Resume.app */;
+			productReference = 18ED98232426D49900F98C67 /* Hire Kris!.app */;
 			productType = "com.apple.product-type.application";
 		};
 		18ED98382426D49A00F98C67 /* KrisTests */ = {
@@ -698,6 +701,7 @@
 				18E7D3C8243D497B00FF8FBF /* Vibrations.swift in Sources */,
 				18F32938243CC9A3000C0B15 /* TabBarViewController.swift in Sources */,
 				182580BA243374FC00A0317E /* AlbumCell.swift in Sources */,
+				1863D0BE2449FE1800A3608D /* JobData.swift in Sources */,
 				183BC2852428D357006A01F8 /* AboutMeEducationCell.swift in Sources */,
 				18ED982B2426D49900F98C67 /* AboutMeViewController.swift in Sources */,
 				182580A8242E418300A0317E /* SkillCellwHeader.swift in Sources */,
@@ -915,7 +919,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KrisJackson.Kris;
-				PRODUCT_NAME = Resume;
+				PRODUCT_NAME = "Hire Kris!";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -936,7 +940,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KrisJackson.Kris;
-				PRODUCT_NAME = Resume;
+				PRODUCT_NAME = "Hire Kris!";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

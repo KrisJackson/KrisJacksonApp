@@ -327,7 +327,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
         objectiveLabel.topAnchor.constraint(equalTo: objectiveHeaderLabel.bottomAnchor, constant: 5).isActive = true
         
         objectiveBackground.addSubview(emailButton)
-        emailButton.heightAnchor.constraint(equalToConstant: 42).isActive = true
+        emailButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         emailButton.leftAnchor.constraint(equalTo: objectiveLabel.leftAnchor).isActive = true
         emailButton.topAnchor.constraint(equalTo: objectiveLabel.bottomAnchor, constant: 15).isActive = true
         emailButton.bottomAnchor.constraint(equalTo: objectiveBackground.bottomAnchor, constant: -20).isActive = true

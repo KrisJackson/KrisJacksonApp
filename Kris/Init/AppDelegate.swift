@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-      print(fcmToken)
+//      print(fcmToken)
     }
     
     func updateFirestorePushTokenIfNeeded() {
@@ -91,7 +91,7 @@ extension AppDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print(response.notification.request.content.userInfo)
+//        print(response.notification.request.content.userInfo)
         completionHandler()
     }
 
