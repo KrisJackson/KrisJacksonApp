@@ -130,12 +130,14 @@ class InboxVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
             .addSnapshotListener { (snapshot, error) in
                 guard let snapshot = snapshot else { return }
                 for (i, document) in snapshot.documents.enumerated() {
-                    let inbox = Inbox()
-                    inbox.userID = document.documentID
-                    inbox.timestamp = document.data()["timestamp"] as? Int
-                    inbox.fromOwner = document.data()["fromOwner"] as? Bool
-                    inbox.lastMessage = document.data()["lastMessage"] as? String
-                    self.cache.setObject(inbox, forKey: i as AnyObject)
+                    DispatchQueue.main.async {
+                        let inbox = Inbox()
+                        inbox.userID = document.documentID
+                        inbox.timestamp = document.data()["timestamp"] as? Int
+                        inbox.fromOwner = document.data()["fromOwner"] as? Bool
+                        inbox.lastMessage = document.data()["lastMessage"] as? String
+                        self.cache.setObject(inbox, forKey: i as AnyObject)
+                    }
                 }
                 self.num = snapshot.count
                 DispatchQueue.main.async {

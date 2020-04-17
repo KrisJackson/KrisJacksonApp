@@ -392,7 +392,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
                 let vc = SFSafariViewController(url: url)
                 vc.preferredBarTintColor = ColorTheme.white
                 vc.preferredControlTintColor = ColorTheme.blue
-                vc.modalPresentationStyle = .automatic
+                vc.modalPresentationStyle = .fullScreen
                 vc.dismissButtonStyle = .close
                 self.present(vc, animated: true)
             }
@@ -408,7 +408,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
             if let urlString: String = self.user.portfolio {
                 if let url = URL(string: urlString) {
                     let vc = SFSafariViewController(url: url)
-                    vc.modalPresentationStyle = .automatic
+                    vc.modalPresentationStyle = .fullScreen
                     vc.preferredBarTintColor = ColorTheme.white
                     vc.preferredControlTintColor = ColorTheme.blue
                     vc.dismissButtonStyle = .close
@@ -422,7 +422,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
                     let vc = SFSafariViewController(url: url)
                     vc.preferredBarTintColor = ColorTheme.white
                     vc.preferredControlTintColor = ColorTheme.blue
-                    vc.modalPresentationStyle = .automatic
+                    vc.modalPresentationStyle = .fullScreen
                     vc.dismissButtonStyle = .close
                     self.present(vc, animated: true)
                 }
@@ -452,7 +452,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
                 let vc = SFSafariViewController(url: url)
                 vc.preferredBarTintColor = ColorTheme.white
                 vc.preferredControlTintColor = ColorTheme.blue
-                vc.modalPresentationStyle = .automatic
+                vc.modalPresentationStyle = .fullScreen
                 vc.dismissButtonStyle = .close
                 self.present(vc, animated: true)
             }
@@ -465,7 +465,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
                 let vc = SFSafariViewController(url: url)
                 vc.preferredBarTintColor = ColorTheme.white
                 vc.preferredControlTintColor = ColorTheme.blue
-                vc.modalPresentationStyle = .automatic
+                vc.modalPresentationStyle = .fullScreen
                 vc.dismissButtonStyle = .close
                 self.present(vc, animated: true)
             }
@@ -478,7 +478,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
                 let vc = SFSafariViewController(url: url)
                 vc.preferredBarTintColor = ColorTheme.white
                 vc.preferredControlTintColor = ColorTheme.blue
-                vc.modalPresentationStyle = .automatic
+                vc.modalPresentationStyle = .fullScreen
                 vc.dismissButtonStyle = .close
                 self.present(vc, animated: true)
             }

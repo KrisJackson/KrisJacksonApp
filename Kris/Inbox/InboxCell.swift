@@ -15,7 +15,7 @@ class InboxCell: UICollectionViewCell {
         let view = UIView()
 //        view.layer.borderColor = #colorLiteral(red: 0.79625386, green: 0.7957550883, blue: 0.8175097108, alpha: 1)
 //        view.layer.borderWidth = 1
-        view.backgroundColor = ColorTheme.white
+        view.backgroundColor = ColorTheme.aboutMeMoreBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -57,7 +57,7 @@ class InboxCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         // not visible to users
-        backgroundColor = ColorTheme.postBackground
+        backgroundColor = ColorTheme.white
         addSubview(lbl)
         lbl.topAnchor.constraint(equalTo: topAnchor).isActive = true
         lbl.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
@@ -65,10 +65,10 @@ class InboxCell: UICollectionViewCell {
         lbl.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         addSubview(view)
-        view.topAnchor.constraint(equalTo: topAnchor, constant: 0.4).isActive = true
+        view.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -0.5).isActive = true
+        view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -2).isActive = true
         
         view.addSubview(name)
         name.heightAnchor.constraint(greaterThanOrEqualToConstant: 24).isActive = true
@@ -83,10 +83,10 @@ class InboxCell: UICollectionViewCell {
         
         view.addSubview(message)
         message.heightAnchor.constraint(greaterThanOrEqualToConstant: 20).isActive = true
-        message.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 5).isActive = true
+        message.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 3).isActive = true
         message.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         message.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        message.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15).isActive = true
+        message.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -35).isActive = true
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
