@@ -38,8 +38,12 @@ extension TabBarViewController {
         let minute = components.minute
         let second = components.second
 
-        let today_string = String(month!) + "/" + String(day!) + "/" + String(year!) + " | " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
-
+        let today_string = String(month!)
+            + "/" + String(day!)
+            + "/" + String(year!)
+            + " | " + String(hour!)
+            + ":" + String(minute!)
+            + ":" +  String(second!)
         return today_string
     }
     
