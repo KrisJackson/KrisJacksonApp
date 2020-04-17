@@ -114,7 +114,7 @@
 		18E7D3CC243D4A1B00FF8FBF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		18E7D3CE243D4A5900FF8FBF /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
 		18E7D3D0243D4AAD00FF8FBF /* RecordDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDevice.swift; sourceTree = "<group>"; };
-		18ED98232426D49900F98C67 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18ED98232426D49900F98C67 /* Hire Kris!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hire Kris!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ED98262426D49900F98C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18ED98282426D49900F98C67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18ED982A2426D49900F98C67 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
@@ -308,7 +308,7 @@
 		18ED98242426D49900F98C67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18ED98232426D49900F98C67 /* Resume.app */,
+				18ED98232426D49900F98C67 /* Hire Kris!.app */,
 				18ED98392426D49A00F98C67 /* KrisTests.xctest */,
 				18ED98442426D49A00F98C67 /* KrisUITests.xctest */,
 			);
@@ -434,7 +434,7 @@
 			);
 			name = Kris;
 			productName = Kris;
-			productReference = 18ED98232426D49900F98C67 /* Resume.app */;
+			productReference = 18ED98232426D49900F98C67 /* Hire Kris!.app */;
 			productType = "com.apple.product-type.application";
 		};
 		18ED98382426D49A00F98C67 /* KrisTests */ = {
@@ -919,7 +919,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KrisJackson.Kris;
-				PRODUCT_NAME = Resume;
+				PRODUCT_NAME = "Hire Kris!";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -940,7 +940,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KrisJackson.Kris;
-				PRODUCT_NAME = Resume;
+				PRODUCT_NAME = "Hire Kris!";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
