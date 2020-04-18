@@ -27,8 +27,8 @@ class CustomAdViewController: UIViewController {
         let image = UIImage(systemName: "doc.text.fill")?
             .withRenderingMode(.alwaysTemplate)
         features.icon.image = image
-        features.header.text = "Share Your Interests"
-        features.body.text = "Learn more about my interests and let me know if we share something in common."
+        features.header.text = "Respond To My Blogs"
+        features.body.text = "Read my blog posts and share your thoughts, ideas, and opinions with me."
         features.translatesAutoresizingMaskIntoConstraints = false
         return features
     }()
@@ -38,8 +38,8 @@ class CustomAdViewController: UIViewController {
         let image = UIImage(systemName: "heart.fill")?
             .withRenderingMode(.alwaysTemplate)
         features.icon.image = image
-        features.header.text = "Respond To My Blogs"
-        features.body.text = "Read my blog posts and share your thoughts, ideas, and opinions with me."
+        features.header.text = "Share Your Interests"
+        features.body.text = "Learn more about my interests and let me know if we share something in common."
         features.translatesAutoresizingMaskIntoConstraints = false
         return features
     }()
