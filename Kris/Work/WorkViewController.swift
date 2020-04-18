@@ -137,19 +137,19 @@ class WorkViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
             
             if let job = job.job {
-                jobCell.job.text = job
+                jobCell.job.header.text = job
             }
             
             if let desc = job.desc {
-                jobCell.desc.text = desc
+                jobCell.job.body.text = desc
             }
             
             if let tools = job.tools {
-                jobCell.tools.text = tools
+                jobCell.tools.body.text = tools
             }
             
             if let duration = job.duration {
-                jobCell.duration.text = duration
+                jobCell.duration.body.text = duration
             }
         }
         return jobCell

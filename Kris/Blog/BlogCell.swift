@@ -23,12 +23,6 @@ class BlogCell: UICollectionViewCell {
         view.layer.cornerRadius = 0
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
-        
-//        // View shadow
-//        view.layer.shadowRadius = 2
-//        view.layer.shadowOpacity = 1
-//        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        view.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3)
         return view
     }()
     

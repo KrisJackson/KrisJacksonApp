@@ -34,12 +34,6 @@ class BlogViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return label
     }()
     
-    lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(handleRefresh), for: UIControl.Event.valueChanged)
-        return refreshControl
-    }()
-    
     init() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         super.init(nibName: nil, bundle: nil)
@@ -87,7 +81,6 @@ class BlogViewController: UIViewController, UICollectionViewDelegate, UICollecti
     private func configureCollectionView() {
         view.addSubview(collectionView)
         view.sendSubviewToBack(collectionView)
-        collectionView.addSubview(refreshControl)
         collectionView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
@@ -212,11 +205,6 @@ class BlogViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 }
             }
         }
-    }
-    
-    @objc private func handleRefresh() {
-//        self.getData()
-        self.refreshControl.endRefreshing()
     }
     
 }

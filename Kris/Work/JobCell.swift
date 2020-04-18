@@ -11,10 +11,6 @@ import UIKit
 class JobCell: UICollectionViewCell {
     static let reuseId = "JobCell"
     
-    let code = UIImage(named: "Code")?.withRenderingMode(.alwaysTemplate)
-    let toolsIcon = UIImage(named: "Tools")?.withRenderingMode(.alwaysTemplate)
-    let durationIcon = UIImage(named: "Duration")?.withRenderingMode(.alwaysTemplate)
-    
     let view: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -90,43 +86,33 @@ class JobCell: UICollectionViewCell {
         return label
     }()
     
-    let job: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 10
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    let job: Features = {
+        let features = Features()
+        let image = UIImage(named: "Tools")?
+            .withRenderingMode(.alwaysTemplate)
+        features.icon.image = image
+        features.translatesAutoresizingMaskIntoConstraints = false
+        return features
     }()
     
-    let toolHeader: UILabel = {
-        let label = UILabel()
-        label.text = "Languages & Tools"
-        label.numberOfLines = 10
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    let tools: Features = {
+        let features = Features()
+        let image = UIImage(named: "Code")?
+            .withRenderingMode(.alwaysTemplate)
+        features.icon.image = image
+        features.header.text = "Languages & Tools"
+        features.translatesAutoresizingMaskIntoConstraints = false
+        return features
     }()
     
-    let desc: UILabel = {
-        let label = UILabel()
-        label.textColor = ColorTheme.jobText
-        label.numberOfLines = 100
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let tools: UILabel = {
-        let label = UILabel()
-        label.textColor = ColorTheme.jobText
-        label.numberOfLines = 100
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    let duration: Features = {
+        let features = Features()
+        let image = UIImage(named: "Duration")?
+            .withRenderingMode(.alwaysTemplate)
+        features.icon.image = image
+        features.header.text = "Job Length"
+        features.translatesAutoresizingMaskIntoConstraints = false
+        return features
     }()
     
     let separatorView: UIView = {
@@ -134,53 +120,6 @@ class JobCell: UICollectionViewCell {
         view.backgroundColor = ColorTheme.aboutMeSeporator
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-    }()
-    
-    lazy var toolsImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = code
-        imageView.contentMode = .scaleAspectFit
-        imageView.tintColor = ColorTheme.black
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
-    
-    lazy var jobImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = toolsIcon
-        imageView.contentMode = .scaleAspectFit
-        imageView.tintColor = ColorTheme.black
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
-    
-    let durationHeader: UILabel = {
-        let label = UILabel()
-        label.text = "Job Length"
-        label.numberOfLines = 10
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let duration: UILabel = {
-        let label = UILabel()
-        label.textColor = ColorTheme.jobText
-        label.numberOfLines = 100
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    lazy var durationImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = durationIcon
-        imageView.contentMode = .scaleAspectFit
-        imageView.tintColor = ColorTheme.black
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
     }()
     
     // created this label because of issues with dynamic cell sizing
@@ -243,57 +182,24 @@ class JobCell: UICollectionViewCell {
         
         jobBackground.addSubview(separatorView)
         separatorView.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
-        separatorView.leftAnchor.constraint(equalTo: jobBackground.leftAnchor, constant: 40).isActive = true
         separatorView.centerXAnchor.constraint(equalTo: jobBackground.centerXAnchor).isActive = true
         separatorView.topAnchor.constraint(equalTo: location.bottomAnchor, constant: 15).isActive = true
-        
-        jobBackground.addSubview(jobImageView)
-        jobImageView.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 15).isActive = true
-        jobImageView.leftAnchor.constraint(equalTo: jobBackground.leftAnchor, constant: 20).isActive = true
-        jobImageView.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        jobImageView.widthAnchor.constraint(equalTo: jobImageView.heightAnchor).isActive = true
+        separatorView.leftAnchor.constraint(equalTo: jobBackground.leftAnchor, constant: 40).isActive = true
         
         jobBackground.addSubview(job)
-        job.rightAnchor.constraint(equalTo: jobBackground.rightAnchor, constant: -20).isActive = true
+        job.leftAnchor.constraint(equalTo: jobBackground.leftAnchor, constant: 20).isActive = true
         job.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 15).isActive = true
-        job.leftAnchor.constraint(equalTo: jobImageView.rightAnchor, constant: 15).isActive = true
-        
-        jobBackground.addSubview(desc)
-        desc.topAnchor.constraint(equalTo: job.bottomAnchor, constant: 3).isActive = true
-        desc.leftAnchor.constraint(equalTo: job.leftAnchor).isActive = true
-        desc.rightAnchor.constraint(equalTo: job.rightAnchor).isActive = true
-        
-        jobBackground.addSubview(toolsImageView)
-        toolsImageView.topAnchor.constraint(equalTo: desc.bottomAnchor, constant: 12).isActive = true
-        toolsImageView.leftAnchor.constraint(equalTo: jobImageView.leftAnchor).isActive = true
-        toolsImageView.heightAnchor.constraint(equalTo: jobImageView.heightAnchor).isActive = true
-        toolsImageView.widthAnchor.constraint(equalTo: toolsImageView.heightAnchor).isActive = true
-        
-        jobBackground.addSubview(toolHeader)
-        toolHeader.rightAnchor.constraint(equalTo: desc.rightAnchor).isActive = true
-        toolHeader.topAnchor.constraint(equalTo: toolsImageView.topAnchor).isActive = true
-        toolHeader.leftAnchor.constraint(equalTo: job.leftAnchor).isActive = true
+        job.rightAnchor.constraint(equalTo: jobBackground.rightAnchor, constant: -20).isActive = true
         
         jobBackground.addSubview(tools)
-        tools.topAnchor.constraint(equalTo: toolHeader.bottomAnchor, constant: 3).isActive = true
-        tools.rightAnchor.constraint(equalTo: toolHeader.rightAnchor).isActive = true
-        tools.leftAnchor.constraint(equalTo: toolHeader.leftAnchor).isActive = true
-        
-        jobBackground.addSubview(durationImageView)
-        durationImageView.topAnchor.constraint(equalTo: tools.bottomAnchor, constant: 12).isActive = true
-        durationImageView.leftAnchor.constraint(equalTo: jobImageView.leftAnchor).isActive = true
-        durationImageView.heightAnchor.constraint(equalTo: jobImageView.heightAnchor).isActive = true
-        durationImageView.widthAnchor.constraint(equalTo: jobImageView.heightAnchor).isActive = true
-        
-        jobBackground.addSubview(durationHeader)
-        durationHeader.rightAnchor.constraint(equalTo: desc.rightAnchor).isActive = true
-        durationHeader.topAnchor.constraint(equalTo: durationImageView.topAnchor).isActive = true
-        durationHeader.leftAnchor.constraint(equalTo: job.leftAnchor).isActive = true
+        tools.leftAnchor.constraint(equalTo: job.leftAnchor).isActive = true
+        tools.rightAnchor.constraint(equalTo: job.rightAnchor).isActive = true
+        tools.topAnchor.constraint(equalTo: job.bottomAnchor, constant: 12).isActive = true
         
         jobBackground.addSubview(duration)
-        duration.rightAnchor.constraint(equalTo: desc.rightAnchor).isActive = true
-        duration.leftAnchor.constraint(equalTo: durationHeader.leftAnchor).isActive = true
-        duration.topAnchor.constraint(equalTo: durationHeader.bottomAnchor, constant: 3).isActive = true
+        duration.leftAnchor.constraint(equalTo: job.leftAnchor).isActive = true
+        duration.rightAnchor.constraint(equalTo: job.rightAnchor).isActive = true
+        duration.topAnchor.constraint(equalTo: tools.bottomAnchor, constant: 12).isActive = true
         duration.bottomAnchor.constraint(equalTo: jobBackground.bottomAnchor, constant: -20).isActive = true
     }
     
