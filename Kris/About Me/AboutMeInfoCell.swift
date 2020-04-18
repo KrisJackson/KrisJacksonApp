@@ -71,8 +71,8 @@ class AboutMeInfoCell: UICollectionViewCell {
         view.addSubview(birthday)
         birthday.translatesAutoresizingMaskIntoConstraints = false
         birthday.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        birthday.topAnchor.constraint(equalTo: view.topAnchor, constant: 12).isActive = true
-        birthday.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+        birthday.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        birthday.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         
         view.addSubview(pName)
         pName.translatesAutoresizingMaskIntoConstraints = false
@@ -116,7 +116,7 @@ class AboutMeInfoCell: UICollectionViewCell {
         separatorView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         separatorView.leftAnchor.constraint(equalTo: moreButton.leftAnchor).isActive = true
         separatorView.rightAnchor.constraint(equalTo: moreButton.rightAnchor).isActive = true
-        separatorView.topAnchor.constraint(equalTo: moreButton.bottomAnchor, constant: 12).isActive = true
+        separatorView.topAnchor.constraint(equalTo: moreButton.bottomAnchor, constant: 20).isActive = true
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {

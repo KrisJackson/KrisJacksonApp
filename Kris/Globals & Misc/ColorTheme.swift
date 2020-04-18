@@ -27,6 +27,7 @@ struct ColorTheme {
     
     static let aboutMeBackgroundView: UIColor = #colorLiteral(red: 0.5386855006, green: 0.5532300472, blue: 0.5660125613, alpha: 1)
     static let aboutMeDescriptionText: UIColor = #colorLiteral(red: 0.4049209356, green: 0.399567008, blue: 0.4170838594, alpha: 1)
+    static let darkGray: UIColor = #colorLiteral(red: 0.3993042111, green: 0.4038123488, blue: 0.4211509824, alpha: 1)
     static let aboutMeSeporator: UIColor = #colorLiteral(red: 0.7970513701, green: 0.7917436957, blue: 0.8092136979, alpha: 1)
     static let aboutMeObjectiveBackground: UIColor = #colorLiteral(red: 0.9677472711, green: 0.972681582, blue: 0.9768218398, alpha: 1)
     static let aboutMeInfoIcon: UIColor = #colorLiteral(red: 0.6357954144, green: 0.6554252505, blue: 0.6637372971, alpha: 1)

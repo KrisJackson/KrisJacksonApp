@@ -13,7 +13,7 @@ class InfoCell: UIView {
     let icon: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.tintColor = ColorTheme.aboutMeInfoIcon
+        imageView.tintColor = ColorTheme.darkGray
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
