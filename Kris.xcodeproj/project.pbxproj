@@ -24,6 +24,7 @@
 		183BC28A242BA4B2006A01F8 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BC289242BA4B2006A01F8 /* JobCell.swift */; };
 		1863D0BE2449FE1800A3608D /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D0BD2449FE1800A3608D /* JobData.swift */; };
 		1863D0C1244A8D0000A3608D /* CustomAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D0C0244A8D0000A3608D /* CustomAdViewController.swift */; };
+		1863D0C3244B81C100A3608D /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D0C2244B81C100A3608D /* Features.swift */; };
 		186EA9E2243658D200282369 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9E1243658D200282369 /* LinkView.swift */; };
 		186EA9EA2439097000282369 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9E92439097000282369 /* MessageCell.swift */; };
 		186EA9EC24396D6900282369 /* GetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9EB24396D6900282369 /* GetInfoViewController.swift */; };
@@ -100,6 +101,7 @@
 		183BC289242BA4B2006A01F8 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 		1863D0BD2449FE1800A3608D /* JobData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
 		1863D0C0244A8D0000A3608D /* CustomAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAdViewController.swift; sourceTree = "<group>"; };
+		1863D0C2244B81C100A3608D /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		186EA9E1243658D200282369 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		186EA9E92439097000282369 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		186EA9EB24396D6900282369 /* GetInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				18E7D3CC243D4A1B00FF8FBF /* Database.swift */,
 				18E7D3CE243D4A5900FF8FBF /* Timestamp.swift */,
 				18E7D3D0243D4AAD00FF8FBF /* RecordDevice.swift */,
+				1863D0C2244B81C100A3608D /* Features.swift */,
 			);
 			path = "Globals & Misc";
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				1863D0C1244A8D0000A3608D /* CustomAdViewController.swift in Sources */,
 				18E7D3CA243D49F200FF8FBF /* BlockedViewController.swift in Sources */,
 				18CFF34C2442D6C700D42016 /* InboxCell.swift in Sources */,
+				1863D0C3244B81C100A3608D /* Features.swift in Sources */,
 				18E7D3C6243D496000FF8FBF /* MapStyle.swift in Sources */,
 				18E7D3D1243D4AAD00FF8FBF /* RecordDevice.swift in Sources */,
 				18ED98292426D49900F98C67 /* SceneDelegate.swift in Sources */,

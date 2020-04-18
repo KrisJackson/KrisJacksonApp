@@ -116,9 +116,9 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
         configureCollectionView()
         configureCollectionViewCells()
         
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyBoard.instantiateViewController(withIdentifier: "CustomAdVC") as! CustomAdViewController
-//        self.present(vc, animated: true, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "CustomAdVC") as! CustomAdViewController
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

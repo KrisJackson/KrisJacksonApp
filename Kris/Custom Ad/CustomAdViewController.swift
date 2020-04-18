@@ -11,23 +11,45 @@ import Firebase
 
 class CustomAdViewController: UIViewController {
     
+    let message: Features = {
+        let features = Features()
+        let image = UIImage(systemName: "message.fill")?
+            .withRenderingMode(.alwaysTemplate)
+        features.icon.image = image
+        features.header.text = "Message Me Anything"
+        features.body.text = "Feel free to message me anything by going to the message page and entering your name."
+        features.translatesAutoresizingMaskIntoConstraints = false
+        return features
+    }()
+    
+    let blog: Features = {
+        let features = Features()
+        let image = UIImage(systemName: "doc.text.fill")?
+            .withRenderingMode(.alwaysTemplate)
+        features.icon.image = image
+        features.header.text = "Share Your Interests"
+        features.body.text = "Learn more about my interests and let me know if we share something in common."
+        features.translatesAutoresizingMaskIntoConstraints = false
+        return features
+    }()
+    
+    let interests: Features = {
+        let features = Features()
+        let image = UIImage(systemName: "heart.fill")?
+            .withRenderingMode(.alwaysTemplate)
+        features.icon.image = image
+        features.header.text = "Respond To My Blogs"
+        features.body.text = "Read my blogs and share your thoughts, ideas, and opinions with me."
+        features.translatesAutoresizingMaskIntoConstraints = false
+        return features
+    }()
+    
     let headerLabel: UILabel = {
         let label = UILabel()
         label.textColor = ColorTheme.blue
         label.numberOfLines = 3
-        label.font = .systemFont(ofSize: 30, weight: .bold)
-        label.text = "Want your resume in an app?"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let descLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .left
-        label.numberOfLines = 10
-        label.textColor = ColorTheme.black
-        label.font = .systemFont(ofSize: 18, weight: .regular)
-        label.text = "Apps provide a fast and convenient way to share information with others. If you would like your resume in an app, reach out to me by going to the message page and sharing your thoughts."
+        label.font = .systemFont(ofSize: 32, weight: .black)
+        label.text = "I want to hear from you!"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -35,14 +57,24 @@ class CustomAdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(headerLabel)
-        headerLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30).isActive = true
         headerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        headerLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30).isActive = true
         headerLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 50).isActive = true
         
-        view.addSubview(descLabel)
-        descLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        descLabel.leftAnchor.constraint(equalTo: headerLabel.leftAnchor).isActive = true
-        descLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 10).isActive = true
+        view.addSubview(message)
+        message.leftAnchor.constraint(equalTo: headerLabel.leftAnchor).isActive = true
+        message.rightAnchor.constraint(equalTo: headerLabel.rightAnchor).isActive = true
+        message.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 30).isActive = true
+        
+        view.addSubview(blog)
+        blog.leftAnchor.constraint(equalTo: message.leftAnchor).isActive = true
+        blog.rightAnchor.constraint(equalTo: message.rightAnchor).isActive = true
+        blog.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 20).isActive = true
+        
+        view.addSubview(interests)
+        interests.leftAnchor.constraint(equalTo: message.leftAnchor).isActive = true
+        interests.rightAnchor.constraint(equalTo: message.rightAnchor).isActive = true
+        interests.topAnchor.constraint(equalTo: blog.bottomAnchor, constant: 20).isActive = true
     }
 
 }
