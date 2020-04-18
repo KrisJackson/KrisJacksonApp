@@ -227,6 +227,7 @@
 				18ED98582426DDB300F98C67 /* WorkViewController.swift */,
 				183BC287242B9E45006A01F8 /* WorkHeaderCell.swift */,
 				183BC289242BA4B2006A01F8 /* JobCell.swift */,
+				1863D0BD2449FE1800A3608D /* JobData.swift */,
 			);
 			path = Work;
 			sourceTree = "<group>";
@@ -273,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				187566842442466900F62C7A /* PushNotification.swift */,
-				1863D0BD2449FE1800A3608D /* JobData.swift */,
 				18ED985A2426DEEB00F98C67 /* ColorTheme.swift */,
 				18E7D3C3243D490100FF8FBF /* DeviceModel.swift */,
 				18E7D3C5243D496000FF8FBF /* MapStyle.swift */,

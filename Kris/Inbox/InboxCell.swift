@@ -41,7 +41,7 @@ class InboxCell: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 2
         label.textColor = ColorTheme.jobText
-        label.font = .systemFont(ofSize: 18, weight: .regular)
+        label.font = .systemFont(ofSize: 17, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -65,6 +65,7 @@ class InboxCell: UICollectionViewCell {
         lbl.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         addSubview(view)
+        view.heightAnchor.constraint(greaterThanOrEqualToConstant: 92).isActive = true
         view.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
@@ -86,7 +87,7 @@ class InboxCell: UICollectionViewCell {
         message.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 3).isActive = true
         message.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         message.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        message.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -35).isActive = true
+        message.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -20).isActive = true
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
