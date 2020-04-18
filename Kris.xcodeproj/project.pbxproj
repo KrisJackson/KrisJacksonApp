@@ -23,6 +23,7 @@
 		183BC288242B9E45006A01F8 /* WorkHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BC287242B9E45006A01F8 /* WorkHeaderCell.swift */; };
 		183BC28A242BA4B2006A01F8 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BC289242BA4B2006A01F8 /* JobCell.swift */; };
 		1863D0BE2449FE1800A3608D /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D0BD2449FE1800A3608D /* JobData.swift */; };
+		1863D0C1244A8D0000A3608D /* CustomAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D0C0244A8D0000A3608D /* CustomAdViewController.swift */; };
 		186EA9E2243658D200282369 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9E1243658D200282369 /* LinkView.swift */; };
 		186EA9EA2439097000282369 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9E92439097000282369 /* MessageCell.swift */; };
 		186EA9EC24396D6900282369 /* GetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9EB24396D6900282369 /* GetInfoViewController.swift */; };
@@ -98,6 +99,7 @@
 		183BC287242B9E45006A01F8 /* WorkHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHeaderCell.swift; sourceTree = "<group>"; };
 		183BC289242BA4B2006A01F8 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 		1863D0BD2449FE1800A3608D /* JobData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
+		1863D0C0244A8D0000A3608D /* CustomAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAdViewController.swift; sourceTree = "<group>"; };
 		186EA9E1243658D200282369 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		186EA9E92439097000282369 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		186EA9EB24396D6900282369 /* GetInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,14 @@
 			path = Work;
 			sourceTree = "<group>";
 		};
+		1863D0BF244A8CB600A3608D /* Custom Ad */ = {
+			isa = PBXGroup;
+			children = (
+				1863D0C0244A8D0000A3608D /* CustomAdViewController.swift */,
+			);
+			path = "Custom Ad";
+			sourceTree = "<group>";
+		};
 		186EA9E324365E3700282369 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +331,7 @@
 				1875668624424A1200F62C7A /* Resume.entitlements */,
 				18ED98312426D49A00F98C67 /* LaunchScreen.storyboard */,
 				18ED982C2426D49900F98C67 /* Main.storyboard */,
+				1863D0BF244A8CB600A3608D /* Custom Ad */,
 				189A58482440F08C00CFB59B /* Init */,
 				18F3292C243CC73B000C0B15 /* Tabbar */,
 				18ED98642427A18100F98C67 /* About Me */,
@@ -711,6 +722,7 @@
 				18ED98272426D49900F98C67 /* AppDelegate.swift in Sources */,
 				18E7D3C4243D490100FF8FBF /* DeviceModel.swift in Sources */,
 				182580B8243279E500A0317E /* LinkCell.swift in Sources */,
+				1863D0C1244A8D0000A3608D /* CustomAdViewController.swift in Sources */,
 				18E7D3CA243D49F200FF8FBF /* BlockedViewController.swift in Sources */,
 				18CFF34C2442D6C700D42016 /* InboxCell.swift in Sources */,
 				18E7D3C6243D496000FF8FBF /* MapStyle.swift in Sources */,

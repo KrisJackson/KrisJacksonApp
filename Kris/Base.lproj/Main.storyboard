@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="144-2Z-z2H">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Work View Controller-->
         <scene sceneID="MJ0-2l-ulG">
             <objects>
-                <viewController storyboardIdentifier="WorkVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TBX-l3-jPo" customClass="WorkViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TBX-l3-jPo" customClass="WorkViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qKp-4M-fpd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
         <!--Interests View Controller-->
         <scene sceneID="NSB-Uo-VpK">
             <objects>
-                <viewController storyboardIdentifier="InterestsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5RA-Cd-W1T" customClass="InterestsViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InterestsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5RA-Cd-W1T" customClass="InterestsViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JIF-hD-3PG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
         <!--Blog View Controller-->
         <scene sceneID="pUV-ta-vEy">
             <objects>
-                <viewController storyboardIdentifier="BlogVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FNf-0V-rbI" customClass="BlogViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlogVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FNf-0V-rbI" customClass="BlogViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="07P-0k-7tg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
         <!--Skills View Controller-->
         <scene sceneID="aZC-gY-RcS">
             <objects>
-                <viewController storyboardIdentifier="SkillsVc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Trk-zJ-CLa" customClass="SkillsViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SkillsVc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Trk-zJ-CLa" customClass="SkillsViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ol4-MC-EIR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,7 @@
         <!--Message View Controller-->
         <scene sceneID="kbE-Vx-gMa">
             <objects>
-                <viewController storyboardIdentifier="MessageVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bS2-QK-TuV" customClass="MessageViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bS2-QK-TuV" customClass="MessageViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KEh-6W-ziH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,7 @@
         <!--About Me View Controller-->
         <scene sceneID="WrV-uX-jpc">
             <objects>
-                <viewController storyboardIdentifier="AboutMeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WWN-hO-GJA" customClass="AboutMeViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutMeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WWN-hO-GJA" customClass="AboutMeViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jvj-s2-2Wc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,7 +113,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="OOi-1v-6DU">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="144-2Z-z2H" customClass="TabBarViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="144-2Z-z2H" customClass="TabBarViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="EGG-Vg-rBE"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3z8-th-rvD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -137,7 +137,7 @@
         <!--InboxVC-->
         <scene sceneID="Olz-cC-xLg">
             <objects>
-                <viewController storyboardIdentifier="InboxVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Bg-4C-QMo" customClass="InboxVC" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InboxVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Bg-4C-QMo" customClass="InboxVC" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rrS-QG-a9a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,7 +168,7 @@
         <!--Blocked View Controller-->
         <scene sceneID="BVi-WL-AgQ">
             <objects>
-                <viewController storyboardIdentifier="Blocked" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x21-xb-IBU" customClass="BlockedViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Blocked" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x21-xb-IBU" customClass="BlockedViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ze-e9-ZLv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -298,7 +298,7 @@
         <!--Projects View Controller-->
         <scene sceneID="mLd-Te-JXf">
             <objects>
-                <viewController storyboardIdentifier="ProjectVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3WC-gx-DF3" customClass="ProjectsViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3WC-gx-DF3" customClass="ProjectsViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zGc-Zw-1Zm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,7 +332,7 @@
         <!--Get Info View Controller-->
         <scene sceneID="hzh-ui-eU0">
             <objects>
-                <viewController storyboardIdentifier="GetInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cSI-6c-LUw" customClass="GetInfoViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cSI-6c-LUw" customClass="GetInfoViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MJm-na-Cbz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,6 +363,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZy-EK-8ov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-914" y="-1493"/>
+        </scene>
+        <!--Custom Ad View Controller-->
+        <scene sceneID="RnB-b6-bRc">
+            <objects>
+                <viewController storyboardIdentifier="CustomAdVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X1Y-1o-0xP" customClass="CustomAdViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yud-05-ljY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="J7p-7p-Q28"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xJ9-un-BCn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PgV-Jb-9fU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="-2204"/>
         </scene>
     </scenes>
     <resources>
