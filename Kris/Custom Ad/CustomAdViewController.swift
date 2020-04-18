@@ -19,6 +19,7 @@ class CustomAdViewController: UIViewController {
         features.header.text = "Message Me Anything"
         features.body.text = "Feel free to message me anything by going to the message page and entering your name."
         features.translatesAutoresizingMaskIntoConstraints = false
+        features.header.font = .systemFont(ofSize: 18, weight: .bold)
         return features
     }()
     
@@ -28,19 +29,21 @@ class CustomAdViewController: UIViewController {
             .withRenderingMode(.alwaysTemplate)
         features.icon.image = image
         features.header.text = "Share Your Interests"
-        features.body.text = "Learn more about my interests and let me know if we share something in common."
+        features.body.text = "Learn more about my interests, and let me know if we share something in common."
         features.translatesAutoresizingMaskIntoConstraints = false
+        features.header.font = .systemFont(ofSize: 18, weight: .bold)
         return features
     }()
     
     let blog: Features = {
         let features = Features()
-        let image = UIImage(systemName: "doc.text.fill")?
+        let image = UIImage(systemName: "doc.fill")?
             .withRenderingMode(.alwaysTemplate)
         features.icon.image = image
         features.header.text = "Respond To My Blogs"
-        features.body.text = "Read my blog posts and share your thoughts, ideas, and opinions with me."
+        features.body.text = "Read my blog posts, and share your thoughts, ideas, and opinions with me."
         features.translatesAutoresizingMaskIntoConstraints = false
+        features.header.font = .systemFont(ofSize: 18, weight: .bold)
         return features
     }()
     
@@ -69,12 +72,12 @@ class CustomAdViewController: UIViewController {
         view.addSubview(interests)
         interests.leftAnchor.constraint(equalTo: message.leftAnchor).isActive = true
         interests.rightAnchor.constraint(equalTo: message.rightAnchor).isActive = true
-        interests.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 20).isActive = true
+        interests.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 30).isActive = true
         
         view.addSubview(blog)
         blog.leftAnchor.constraint(equalTo: message.leftAnchor).isActive = true
         blog.rightAnchor.constraint(equalTo: message.rightAnchor).isActive = true
-        blog.topAnchor.constraint(equalTo: interests.bottomAnchor, constant: 20).isActive = true
+        blog.topAnchor.constraint(equalTo: interests.bottomAnchor, constant: 30).isActive = true
     }
 
 }
