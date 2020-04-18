@@ -11,12 +11,22 @@ import Firebase
 
 class CustomAdViewController: UIViewController {
     
+    let headerLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = ColorTheme.blue
+        label.numberOfLines = 3
+        label.font = .systemFont(ofSize: 32, weight: .black)
+        label.text = "I want to hear from you!"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     let message: Features = {
         let features = Features()
         let image = UIImage(systemName: "message.fill")?
             .withRenderingMode(.alwaysTemplate)
         features.icon.image = image
-        features.header.text = "Message Me Anything"
+        features.header.text = "Message Me"
         features.body.text = "Feel free to message me anything by going to the message page and entering your name."
         features.translatesAutoresizingMaskIntoConstraints = false
         features.header.font = .systemFont(ofSize: 18, weight: .bold)
@@ -45,16 +55,6 @@ class CustomAdViewController: UIViewController {
         features.translatesAutoresizingMaskIntoConstraints = false
         features.header.font = .systemFont(ofSize: 18, weight: .bold)
         return features
-    }()
-    
-    let headerLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = ColorTheme.blue
-        label.numberOfLines = 3
-        label.font = .systemFont(ofSize: 32, weight: .black)
-        label.text = "I want to hear from you!"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
     }()
 
     override func viewDidLoad() {
