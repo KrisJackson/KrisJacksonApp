@@ -39,7 +39,7 @@ class CustomAdViewController: UIViewController {
             .withRenderingMode(.alwaysTemplate)
         features.icon.image = image
         features.header.text = "Respond To My Blogs"
-        features.body.text = "Read my blogs and share your thoughts, ideas, and opinions with me."
+        features.body.text = "Read my blog posts and share your thoughts, ideas, and opinions with me."
         features.translatesAutoresizingMaskIntoConstraints = false
         return features
     }()
