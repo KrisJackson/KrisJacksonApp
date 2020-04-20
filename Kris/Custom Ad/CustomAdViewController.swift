@@ -56,6 +56,18 @@ class CustomAdViewController: UIViewController {
         features.header.font = .systemFont(ofSize: 18, weight: .bold)
         return features
     }()
+    
+    lazy var submit: UIButton = {
+        let button = UIButton(type: .system)
+        button.layer.cornerRadius = 8
+        button.setTitle("Dismiss", for: .normal)
+        button.backgroundColor = ColorTheme.blue
+        button.setTitleColor(ColorTheme.white, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+        button.addTarget(self, action: #selector(dismissPage), for: .touchUpInside)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +90,15 @@ class CustomAdViewController: UIViewController {
         blog.leftAnchor.constraint(equalTo: message.leftAnchor).isActive = true
         blog.rightAnchor.constraint(equalTo: message.rightAnchor).isActive = true
         blog.topAnchor.constraint(equalTo: interests.bottomAnchor, constant: 30).isActive = true
+        
+        view.addSubview(submit)
+        submit.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        submit.leftAnchor.constraint(equalTo: message.leftAnchor).isActive = true
+        submit.rightAnchor.constraint(equalTo: message.rightAnchor).isActive = true
+        submit.topAnchor.constraint(equalTo: blog.bottomAnchor, constant: 30).isActive = true
     }
 
+    @objc private func dismissPage() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

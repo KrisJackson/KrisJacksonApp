@@ -68,7 +68,7 @@ class InfoView: UIView {
         separatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         separatorView.leftAnchor.constraint(equalTo: body.leftAnchor).isActive = true
         separatorView.rightAnchor.constraint(equalTo: body.rightAnchor).isActive = true
-        separatorView.topAnchor.constraint(equalTo: body.bottomAnchor, constant: 12).isActive = true
+        separatorView.topAnchor.constraint(equalTo: body.bottomAnchor, constant: 15).isActive = true
     }
     
     required init?(coder: NSCoder) {

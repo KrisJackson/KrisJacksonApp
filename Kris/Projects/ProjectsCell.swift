@@ -63,6 +63,13 @@ class ProjectsCell: UICollectionViewCell {
         return label
     }()
     
+    let project: Features = {
+        let features = Features()
+        features.translatesAutoresizingMaskIntoConstraints = false
+        features.header.font = .systemFont(ofSize: 18, weight: .bold)
+        return features
+    }()
+    
     let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = ColorTheme.aboutMeSeporator

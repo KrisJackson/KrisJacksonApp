@@ -251,7 +251,7 @@ class MoreInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let spacing: CGFloat = 12
+        let spacing: CGFloat = 15
         view.addSubview(header)
         header.heightAnchor.constraint(equalToConstant: 50).isActive = true
         header.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -282,7 +282,7 @@ class MoreInfoViewController: UIViewController {
         scrollView.addSubview(basic)
         basic.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         basic.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        basic.topAnchor.constraint(equalTo: pEmail.bottomAnchor, constant: 28).isActive = true
+        basic.topAnchor.constraint(equalTo: pEmail.bottomAnchor, constant: 25).isActive = true
         
         scrollView.addSubview(name)
         name.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
@@ -312,7 +312,7 @@ class MoreInfoViewController: UIViewController {
         scrollView.addSubview(education)
         education.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         education.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        education.topAnchor.constraint(equalTo: live.bottomAnchor, constant: 28).isActive = true
+        education.topAnchor.constraint(equalTo: live.bottomAnchor, constant: 25).isActive = true
         
         scrollView.addSubview(college)
         college.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
@@ -337,7 +337,7 @@ class MoreInfoViewController: UIViewController {
         scrollView.addSubview(social)
         social.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         social.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        social.topAnchor.constraint(equalTo: hSchool.bottomAnchor, constant: 28).isActive = true
+        social.topAnchor.constraint(equalTo: hSchool.bottomAnchor, constant: 25).isActive = true
         
         scrollView.addSubview(website)
         website.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true

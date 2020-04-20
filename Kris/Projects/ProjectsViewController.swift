@@ -94,7 +94,6 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let projectCell = collectionView.dequeueReusableCell(withReuseIdentifier: ProjectsCell.reuseId, for: indexPath) as! ProjectsCell
         projectCell.header.text = proj[indexPath.row]
-//        projectCell.languages.text = lang[indexPath.row])
         projectCell.desc.text = desc[indexPath.row]
         
         let text = "Languages & Tools: "
