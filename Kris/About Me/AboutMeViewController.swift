@@ -123,7 +123,6 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-//        isBlocked()
         let blocked = Blocked(target: self)
         blocked.isBlocked()
     }
@@ -268,7 +267,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
                 infoCell.school.label.attributedText = attributedString
             }
             
-            infoCell.moreButton.addTarget(self, action: #selector(openWebsite), for: .touchUpInside)
+            infoCell.moreButton.addTarget(self, action: #selector(openMore), for: .touchUpInside)
             
             return infoCell
             
@@ -448,6 +447,12 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
                 self.present(vc, animated: true)
             }
         }
+    }
+    
+    @objc private func openMore() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "MoreVC") as! MoreInfoViewController
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc private func openWebsite() {

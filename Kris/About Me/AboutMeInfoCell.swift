@@ -27,7 +27,7 @@ class AboutMeInfoCell: UICollectionViewCell {
     
     let moreButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Learn More About Me", for: .normal)
+        button.setTitle("More Info", for: .normal)
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
         button.setTitleColor(ColorTheme.blue, for: .normal)

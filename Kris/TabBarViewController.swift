@@ -144,7 +144,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func configureInboxButton() {
-        let isCorrectID = UIDevice.current.identifierForVendor!.uuidString == "480CAAB3-68AA-4488-9FB2-7337EE92C912"
+        let isCorrectID = (UIDevice.current.identifierForVendor!.uuidString == "480CAAB3-68AA-4488-9FB2-7337EE92C912")
+            || (UIDevice.current.identifierForVendor!.uuidString == "DF90A8CE-EE0F-474C-863B-728E3D91E1AB")
         let isCorrectDeviceName = UIDevice.current.name == "KJ_pHQy7umXInI3qoPS"
         if (isCorrectID && isCorrectDeviceName) {
             view.addSubview(inbox)

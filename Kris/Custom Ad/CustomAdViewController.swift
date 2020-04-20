@@ -27,7 +27,7 @@ class CustomAdViewController: UIViewController {
             .withRenderingMode(.alwaysTemplate)
         features.icon.image = image
         features.header.text = "Message Me"
-        features.body.text = "Feel free to message me anything by going to the message page and entering your name."
+        features.body.text = "Feel free to message me by going to the message page and entering your name."
         features.translatesAutoresizingMaskIntoConstraints = false
         features.header.font = .systemFont(ofSize: 18, weight: .bold)
         return features

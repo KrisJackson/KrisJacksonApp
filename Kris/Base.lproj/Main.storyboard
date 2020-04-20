@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="-20.289855072463769" y="-1493.3035714285713"/>
         </scene>
-        <!--View Controller-->
+        <!--More Info View Controller-->
         <scene sceneID="pgP-pq-4XE">
             <objects>
-                <viewController id="bNx-AB-LLA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreVC" id="bNx-AB-LLA" customClass="MoreInfoViewController" customModule="Hire_Kris_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7vE-vy-AFd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

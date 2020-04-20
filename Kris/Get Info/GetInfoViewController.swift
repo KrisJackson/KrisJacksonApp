@@ -136,7 +136,6 @@ class GetInfoViewController: UIViewController {
         scrollView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor).isActive = true
 
         scrollView.addSubview(header)
-        header.rightAnchor.constraint(equalTo: scrollView.rightAnchor).isActive = true
         header.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40).isActive = true
         header.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
         header.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 20).isActive = true

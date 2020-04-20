@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0635912046C0BA54E2172EEF /* Pods_Kris_KrisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC792C701E125494F8600DDC /* Pods_Kris_KrisUITests.framework */; };
+		182070C4244CF9DE00C741E2 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182070C3244CF9DE00C741E2 /* InfoView.swift */; };
+		182070C6244D009800C741E2 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182070C5244D009800C741E2 /* MoreInfoViewController.swift */; };
 		182580A4242E414600A0317E /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182580A3242E414600A0317E /* InfoCell.swift */; };
 		182580A6242E416300A0317E /* SkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182580A5242E416300A0317E /* SkillCell.swift */; };
 		182580A8242E418300A0317E /* SkillCellwHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182580A7242E418300A0317E /* SkillCellwHeader.swift */; };
@@ -85,6 +87,8 @@
 
 /* Begin PBXFileReference section */
 		12DF4825DE935201B1D68A4F /* Pods_KrisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KrisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		182070C3244CF9DE00C741E2 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		182070C5244D009800C741E2 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		182580A3242E414600A0317E /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		182580A5242E416300A0317E /* SkillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCell.swift; sourceTree = "<group>"; };
 		182580A7242E418300A0317E /* SkillCellwHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCellwHeader.swift; sourceTree = "<group>"; };
@@ -192,6 +196,15 @@
 				12DF4825DE935201B1D68A4F /* Pods_KrisTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		182070C2244CF94A00C741E2 /* More Info */ = {
+			isa = PBXGroup;
+			children = (
+				182070C5244D009800C741E2 /* MoreInfoViewController.swift */,
+				182070C3244CF9DE00C741E2 /* InfoView.swift */,
+			);
+			path = "More Info";
 			sourceTree = "<group>";
 		};
 		182580AB242E476200A0317E /* Skills */ = {
@@ -338,6 +351,7 @@
 				189A58482440F08C00CFB59B /* Init */,
 				18F3292C243CC73B000C0B15 /* Tabbar */,
 				18ED98642427A18100F98C67 /* About Me */,
+				182070C2244CF94A00C741E2 /* More Info */,
 				183BC286242B9D98006A01F8 /* Work */,
 				182580AB242E476200A0317E /* Skills */,
 				182580AC242FD7F800A0317E /* Projects */,
@@ -704,6 +718,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182070C4244CF9DE00C741E2 /* InfoView.swift in Sources */,
 				187566852442466900F62C7A /* PushNotification.swift in Sources */,
 				18E7D3CD243D4A1B00FF8FBF /* Database.swift in Sources */,
 				18F3293A243CCA74000C0B15 /* TabBarSlideAnimation.swift in Sources */,
@@ -730,6 +745,7 @@
 				18CFF34C2442D6C700D42016 /* InboxCell.swift in Sources */,
 				1863D0C3244B81C100A3608D /* Features.swift in Sources */,
 				18E7D3C6243D496000FF8FBF /* MapStyle.swift in Sources */,
+				182070C6244D009800C741E2 /* MoreInfoViewController.swift in Sources */,
 				18E7D3D1243D4AAD00FF8FBF /* RecordDevice.swift in Sources */,
 				18ED98292426D49900F98C67 /* SceneDelegate.swift in Sources */,
 				18ED98662427A2B000F98C67 /* AboutMeHeaderCell.swift in Sources */,
@@ -927,13 +943,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kris/Resume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = Kris/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KrisJackson.Kris;
 				PRODUCT_NAME = "Hire Kris!";
 				SWIFT_VERSION = 5.0;
@@ -948,13 +965,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kris/Resume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = Kris/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KrisJackson.Kris;
 				PRODUCT_NAME = "Hire Kris!";
 				SWIFT_VERSION = 5.0;
