@@ -24,10 +24,10 @@ class MoreInfoViewController: UIViewController {
     let contact: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.text = "Contact Info"
+        label.text = "Contact"
         label.textAlignment = .left
-        label.textColor = ColorTheme.blue
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.textColor = ColorTheme.black
+        label.font = .systemFont(ofSize: 28, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -35,10 +35,10 @@ class MoreInfoViewController: UIViewController {
     let basic: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.text = "Basic Info"
+        label.text = "General"
         label.textAlignment = .left
-        label.textColor = ColorTheme.blue
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.textColor = ColorTheme.black
+        label.font = .systemFont(ofSize: 28, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -48,8 +48,8 @@ class MoreInfoViewController: UIViewController {
         label.numberOfLines = 1
         label.text = "Education"
         label.textAlignment = .left
-        label.textColor = ColorTheme.blue
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.textColor = ColorTheme.black
+        label.font = .systemFont(ofSize: 28, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -59,8 +59,8 @@ class MoreInfoViewController: UIViewController {
         label.numberOfLines = 1
         label.text = "Social"
         label.textAlignment = .left
-        label.textColor = ColorTheme.blue
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.textColor = ColorTheme.black
+        label.font = .systemFont(ofSize: 28, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -251,7 +251,7 @@ class MoreInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let spacing: CGFloat = 18
+        let spacing: CGFloat = 12
         view.addSubview(header)
         header.heightAnchor.constraint(equalToConstant: 50).isActive = true
         header.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -267,7 +267,7 @@ class MoreInfoViewController: UIViewController {
         scrollView.addSubview(contact)
         contact.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40).isActive = true
         contact.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 8).isActive = true
-        contact.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: spacing).isActive = true
+        contact.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 20).isActive = true
         
         scrollView.addSubview(phone)
         phone.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
@@ -363,6 +363,6 @@ class MoreInfoViewController: UIViewController {
         github.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         github.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
         github.topAnchor.constraint(equalTo: pInstagram.bottomAnchor, constant: spacing).isActive = true
-        github.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -spacing).isActive = true
+        github.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20).isActive = true
     }
 }

@@ -90,8 +90,8 @@ class InboxVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         getData(id: inbox.userID) { (snapshot, error) in
             guard let snapshot = snapshot else { return }
             DispatchQueue.main.async {
-                let first = (snapshot.data()!["first"] as? String) ?? "{NULL}"
-                let last = (snapshot.data()!["last"] as? String) ?? "{NULL}"
+                let first = (snapshot.data()!["first"] as? String) ?? "NULL"
+                let last = (snapshot.data()!["last"] as? String) ?? "NULL"
                 cell.name.text = "\(first) \(last)"
             }
         }
