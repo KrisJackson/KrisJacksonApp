@@ -33,16 +33,6 @@ class ProjectsCell: UICollectionViewCell {
         return view
     }()
     
-    let header: UILabel = {
-        let label = UILabel()
-        label.textColor = ColorTheme.black
-        label.numberOfLines = 100
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
     let languages: UILabel = {
         let label = UILabel()
         label.textColor = ColorTheme.black
@@ -53,18 +43,9 @@ class ProjectsCell: UICollectionViewCell {
         return label
     }()
     
-    let desc: UILabel = {
-        let label = UILabel()
-        label.textColor = ColorTheme.black
-        label.numberOfLines = 100
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
     let project: Features = {
         let features = Features()
+        features.tintColor = ColorTheme.black
         features.translatesAutoresizingMaskIntoConstraints = false
         features.header.font = .systemFont(ofSize: 18, weight: .bold)
         return features
@@ -96,7 +77,7 @@ class ProjectsCell: UICollectionViewCell {
         lbl.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         addSubview(view)
-        view.topAnchor.constraint(equalTo: topAnchor, constant: 30).isActive = true
+        view.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
@@ -105,26 +86,22 @@ class ProjectsCell: UICollectionViewCell {
         line.widthAnchor.constraint(equalToConstant: 0).isActive = true
         line.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         line.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        line.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30).isActive = true
+        line.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         
         view.addSubview(projectBackground)
         projectBackground.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         projectBackground.topAnchor.constraint(equalTo: view.topAnchor, constant: 2).isActive = true
         projectBackground.leftAnchor.constraint(equalTo: line.rightAnchor, constant: 0).isActive = true
         
-        projectBackground.addSubview(header)
-        header.centerXAnchor.constraint(equalTo: projectBackground.centerXAnchor).isActive = true
-        header.topAnchor.constraint(equalTo: projectBackground.topAnchor).isActive = true
-        header.leftAnchor.constraint(equalTo: projectBackground.leftAnchor).isActive = true
-        
-        projectBackground.addSubview(desc)
-        desc.leftAnchor.constraint(equalTo: header.leftAnchor).isActive = true
-        desc.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10).isActive = true
-        desc.centerXAnchor.constraint(equalTo: projectBackground.centerXAnchor).isActive = true
+        projectBackground.addSubview(project)
+        project.iconHeight.constant = 38
+        project.centerXAnchor.constraint(equalTo: projectBackground.centerXAnchor).isActive = true
+        project.topAnchor.constraint(equalTo: projectBackground.topAnchor).isActive = true
+        project.leftAnchor.constraint(equalTo: projectBackground.leftAnchor).isActive = true
 
         projectBackground.addSubview(languages)
-        languages.leftAnchor.constraint(equalTo: header.leftAnchor).isActive = true
-        languages.topAnchor.constraint(equalTo: desc.bottomAnchor, constant: 10).isActive = true
+        languages.leftAnchor.constraint(equalTo: project.header.leftAnchor).isActive = true
+        languages.topAnchor.constraint(equalTo: project.bottomAnchor, constant: 3).isActive = true
         languages.centerXAnchor.constraint(equalTo: projectBackground.centerXAnchor).isActive = true
         languages.bottomAnchor.constraint(equalTo: projectBackground.bottomAnchor).isActive = true
         

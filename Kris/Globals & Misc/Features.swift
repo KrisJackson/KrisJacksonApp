@@ -10,6 +10,8 @@ import UIKit
 
 class Features: UIView {
     
+    var iconHeight: NSLayoutConstraint!
+    
     let header: UILabel = {
         let label = UILabel()
         label.numberOfLines = 10
@@ -43,8 +45,9 @@ class Features: UIView {
         addSubview(icon)
         icon.topAnchor.constraint(equalTo: topAnchor).isActive = true
         icon.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 25).isActive = true
         icon.widthAnchor.constraint(equalTo: icon.heightAnchor).isActive = true
+        iconHeight = icon.heightAnchor.constraint(equalToConstant: 25)
+        iconHeight.isActive = true
         
         addSubview(header)
         header.topAnchor.constraint(equalTo: topAnchor).isActive = true
