@@ -33,6 +33,7 @@
 		186EA9EE24399A1500282369 /* MessageHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9ED24399A1500282369 /* MessageHeaderCell.swift */; };
 		187566832442442F00F62C7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187566822442442F00F62C7A /* GoogleService-Info.plist */; };
 		187566852442466900F62C7A /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187566842442466900F62C7A /* PushNotification.swift */; };
+		18873278244F8B5F001F410D /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18873277244F8B5F001F410D /* ProgressView.swift */; };
 		18CFF34A2442D6AF00D42016 /* InboxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFF3492442D6AF00D42016 /* InboxVC.swift */; };
 		18CFF34C2442D6C700D42016 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFF34B2442D6C700D42016 /* InboxCell.swift */; };
 		18E7D3C4243D490100FF8FBF /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7D3C3243D490100FF8FBF /* DeviceModel.swift */; };
@@ -113,6 +114,7 @@
 		187566822442442F00F62C7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		187566842442466900F62C7A /* PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		1875668624424A1200F62C7A /* Resume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Resume.entitlements; sourceTree = "<group>"; };
+		18873277244F8B5F001F410D /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		18CFF3492442D6AF00D42016 /* InboxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxVC.swift; sourceTree = "<group>"; };
 		18CFF34B2442D6C700D42016 /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
 		18E7D3C3243D490100FF8FBF /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				18E7D3CE243D4A5900FF8FBF /* Timestamp.swift */,
 				18E7D3D0243D4AAD00FF8FBF /* RecordDevice.swift */,
 				1863D0C2244B81C100A3608D /* Features.swift */,
+				18873277244F8B5F001F410D /* ProgressView.swift */,
 			);
 			path = "Globals & Misc";
 			sourceTree = "<group>";
@@ -741,6 +744,7 @@
 				18E7D3C4243D490100FF8FBF /* DeviceModel.swift in Sources */,
 				182580B8243279E500A0317E /* LinkCell.swift in Sources */,
 				1863D0C1244A8D0000A3608D /* CustomAdViewController.swift in Sources */,
+				18873278244F8B5F001F410D /* ProgressView.swift in Sources */,
 				18E7D3CA243D49F200FF8FBF /* BlockedViewController.swift in Sources */,
 				18CFF34C2442D6C700D42016 /* InboxCell.swift in Sources */,
 				1863D0C3244B81C100A3608D /* Features.swift in Sources */,
@@ -943,7 +947,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kris/Resume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = Kris/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -965,7 +969,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kris/Resume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = Kris/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

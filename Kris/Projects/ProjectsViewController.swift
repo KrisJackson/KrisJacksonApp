@@ -13,10 +13,10 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     fileprivate(set) var collectionView: UICollectionView
 
-    let icons = ["AppStore", "Firefox", "Website", "VR", "Ray", "Raft", "Server", "UDP"]
-    let proj = ["Exchange App", "Firefox Application Services", "Social Website", "VR Bowling", "Ray Tracer", "Raft Consensus Algorithm", "HTTP Web Server", "UDP Ping-Pong"]
-    let lang = ["Swift, Node.js, Firebase, Google Cloud Firestore, Algolia, ﻿Stripe, Braintree", "Swift, Rust", "HTML/CSS, PHP, MySQL", "C#", "C#", "Go", "C", "C"]
-    let desc = ["Developed and launched an iOS marketplace app that allows registered users to exchange items in-app", "Contributed to the Mozilla Foundation open source application via GitHub", "Built a Facebook style website using cPanel, phpMyAdmin, and MySQL", "Built a Virtual Reality bowling game using Unity and Blender", "Built a basic Ray Tracer in Unity", "Implemented the distributed consensus and replicated state machine layer of Raft", "Built a web server that communicates using the HTTP protocol over TCP/IP", "Built a client and server echo response/request program using UDP"]
+    let icons = ["AppStore", "Firefox", "Website", "Raft", "Server", "UDP", "VR", "Ray"]
+    let proj = ["Exchange App", "Firefox Application Services", "Social Website", "Raft Consensus Algorithm", "HTTP Web Server", "UDP Ping-Pong", "VR Bowling", "Ray Tracer"]
+    let lang = ["Swift, Node.js, Firebase, Google Cloud Firestore, Algolia, ﻿Stripe, Braintree", "Swift, Rust", "HTML/CSS, PHP, MySQL", "Go", "C", "C", "C#", "C#"]
+    let desc = ["Developed and launched an iOS marketplace app that allows registered users to exchange items in-app", "Contributed to the Mozilla Foundation open source application via GitHub", "Built a Facebook style website using cPanel, phpMyAdmin, and MySQL", "Implemented the distributed consensus and replicated state machine layer of Raft", "Built a web server that communicates using the HTTP protocol over TCP/IP", "Built a client and server echo response/request program using UDP", "Built a Virtual Reality bowling game using Unity and Blender", "Built a basic Ray Tracer in Unity"]
     
     let header: UILabel = {
         let label = UILabel()

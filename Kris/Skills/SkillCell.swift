@@ -102,7 +102,7 @@ class SkillCell: UICollectionViewCell {
         view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         view.addSubview(icon)
-        icon.heightAnchor.constraint(equalToConstant: 28).isActive = true
+        icon.heightAnchor.constraint(equalToConstant: 32).isActive = true
         icon.widthAnchor.constraint(equalTo: icon.heightAnchor).isActive = true
         icon.topAnchor.constraint(equalTo: view.topAnchor, constant: 15).isActive = true
         icon.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true

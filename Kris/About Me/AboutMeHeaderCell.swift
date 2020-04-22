@@ -314,7 +314,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
         view.addSubview(objectiveBackground)
         objectiveBackground.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         objectiveBackground.leftAnchor.constraint(equalTo: descLabel.leftAnchor).isActive = true
-        objectiveBackground.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 15).isActive = true
+        objectiveBackground.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 20).isActive = true
         
         objectiveBackground.addSubview(objectiveHeaderLabel)
         objectiveHeaderLabel.centerXAnchor.constraint(equalTo: objectiveBackground.centerXAnchor).isActive = true
@@ -339,12 +339,14 @@ class AboutMeHeaderCell: UICollectionViewCell {
         resumeButton.centerYAnchor.constraint(equalTo: emailButton.centerYAnchor).isActive = true
         resumeButton.leftAnchor.constraint(equalTo: emailButton.rightAnchor, constant: 6).isActive = true
         
-        view.addSubview(separatorView2)
-        separatorView2.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
-        separatorView2.leftAnchor.constraint(equalTo: descLabel.leftAnchor).isActive = true
-        separatorView2.centerXAnchor.constraint(equalTo: descLabel.centerXAnchor).isActive = true
-        separatorView2.topAnchor.constraint(equalTo: objectiveBackground.bottomAnchor, constant: 15).isActive = true
-        separatorView2.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        objectiveBackground.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+//        view.addSubview(separatorView2)
+//        separatorView2.heightAnchor.constraint(equalToConstant: 0.0).isActive = true
+//        separatorView2.leftAnchor.constraint(equalTo: descLabel.leftAnchor).isActive = true
+//        separatorView2.centerXAnchor.constraint(equalTo: descLabel.centerXAnchor).isActive = true
+//        separatorView2.topAnchor.constraint(equalTo: objectiveBackground.bottomAnchor, constant: 15).isActive = true
+//        separatorView2.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         setImage(imageView: profilePictureImage, key: "profileImage")
         setImage(imageView: backgroundImage, key: "backgroundImage")

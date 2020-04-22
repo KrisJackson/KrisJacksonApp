@@ -100,7 +100,7 @@ class MoreInfoViewController: UIViewController {
     
     let pName: InfoView = {
         let infoView = InfoView()
-        let image = UIImage(systemName: "person.circle.fill")?
+        let image = UIImage(systemName: "person")?
             .withRenderingMode(.alwaysTemplate)
         infoView.icon.image = image
         infoView.body.text = "Preferred Name"
@@ -251,7 +251,7 @@ class MoreInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let spacing: CGFloat = 15
+        let spacing: CGFloat = 12
         view.addSubview(header)
         header.heightAnchor.constraint(equalToConstant: 50).isActive = true
         header.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -272,7 +272,7 @@ class MoreInfoViewController: UIViewController {
         scrollView.addSubview(phone)
         phone.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         phone.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        phone.topAnchor.constraint(equalTo: contact.bottomAnchor, constant: 20).isActive = true
+        phone.topAnchor.constraint(equalTo: contact.bottomAnchor, constant: 22).isActive = true
         
         scrollView.addSubview(pEmail)
         pEmail.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
@@ -282,12 +282,12 @@ class MoreInfoViewController: UIViewController {
         scrollView.addSubview(basic)
         basic.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         basic.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        basic.topAnchor.constraint(equalTo: pEmail.bottomAnchor, constant: 25).isActive = true
+        basic.topAnchor.constraint(equalTo: pEmail.bottomAnchor, constant: 26).isActive = true
         
         scrollView.addSubview(name)
         name.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         name.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        name.topAnchor.constraint(equalTo: basic.bottomAnchor, constant: 20).isActive = true
+        name.topAnchor.constraint(equalTo: basic.bottomAnchor, constant: 22).isActive = true
         
         scrollView.addSubview(pName)
         pName.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
@@ -312,12 +312,12 @@ class MoreInfoViewController: UIViewController {
         scrollView.addSubview(education)
         education.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         education.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        education.topAnchor.constraint(equalTo: live.bottomAnchor, constant: 25).isActive = true
+        education.topAnchor.constraint(equalTo: live.bottomAnchor, constant: 26).isActive = true
         
         scrollView.addSubview(college)
         college.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         college.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        college.topAnchor.constraint(equalTo: education.bottomAnchor, constant: 20).isActive = true
+        college.topAnchor.constraint(equalTo: education.bottomAnchor, constant: 22).isActive = true
         
         scrollView.addSubview(major)
         major.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
@@ -337,12 +337,12 @@ class MoreInfoViewController: UIViewController {
         scrollView.addSubview(social)
         social.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         social.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        social.topAnchor.constraint(equalTo: hSchool.bottomAnchor, constant: 25).isActive = true
+        social.topAnchor.constraint(equalTo: hSchool.bottomAnchor, constant: 26).isActive = true
         
         scrollView.addSubview(website)
         website.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true
         website.rightAnchor.constraint(equalTo: contact.rightAnchor).isActive = true
-        website.topAnchor.constraint(equalTo: social.bottomAnchor, constant: 20).isActive = true
+        website.topAnchor.constraint(equalTo: social.bottomAnchor, constant: 22).isActive = true
         
         scrollView.addSubview(linkedIn)
         linkedIn.leftAnchor.constraint(equalTo: contact.leftAnchor).isActive = true

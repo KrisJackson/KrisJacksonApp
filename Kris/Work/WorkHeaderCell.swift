@@ -28,7 +28,7 @@ class WorkHeaderCell: UICollectionViewCell {
         let view = UIView()
         view.addGestureRecognizer(skillsTapped)
         view.layer.cornerRadius = 20
-        view.layer.masksToBounds = true
+//        view.layer.masksToBounds = true
         view.backgroundColor = ColorTheme.gray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -62,7 +62,7 @@ class WorkHeaderCell: UICollectionViewCell {
         let view = UIView()
         view.addGestureRecognizer(projectTapped)
         view.layer.cornerRadius = 20
-        view.layer.masksToBounds = true
+//        view.layer.masksToBounds = true
         view.backgroundColor = ColorTheme.gray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -169,11 +169,11 @@ class WorkHeaderCell: UICollectionViewCell {
         projectsLabel.leftAnchor.constraint(equalTo: projectsIcon.rightAnchor, constant: 5).isActive = true
         
         view.addSubview(separatorView)
-        separatorView.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
+        separatorView.heightAnchor.constraint(equalToConstant: 0.0).isActive = true
         separatorView.leftAnchor.constraint(equalTo: skillsBackground.leftAnchor).isActive = true
         separatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        separatorView.topAnchor.constraint(equalTo: skillsBackground.bottomAnchor, constant: 15).isActive = true
-        separatorView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -6).isActive = true
+        separatorView.topAnchor.constraint(equalTo: skillsBackground.bottomAnchor, constant: 8).isActive = true // 15
+        separatorView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true // -6
         
     }
     

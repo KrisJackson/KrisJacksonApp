@@ -39,7 +39,7 @@ class InfoView: UIView {
     
     let separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.786700666, green: 0.796076417, blue: 0.8176568151, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.8584988713, green: 0.8704935908, blue: 0.9008154273, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -64,11 +64,11 @@ class InfoView: UIView {
         body.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 5).isActive = true
         
         addSubview(separatorView)
-        separatorView.heightAnchor.constraint(equalToConstant: 0.0).isActive = true
+        separatorView.heightAnchor.constraint(equalToConstant: 0).isActive = true
         separatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         separatorView.leftAnchor.constraint(equalTo: body.leftAnchor).isActive = true
         separatorView.rightAnchor.constraint(equalTo: body.rightAnchor).isActive = true
-        separatorView.topAnchor.constraint(equalTo: body.bottomAnchor, constant: 15).isActive = true
+        separatorView.topAnchor.constraint(equalTo: body.bottomAnchor, constant: 12).isActive = true
     }
     
     required init?(coder: NSCoder) {

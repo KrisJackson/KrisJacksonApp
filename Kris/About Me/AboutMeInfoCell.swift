@@ -71,7 +71,7 @@ class AboutMeInfoCell: UICollectionViewCell {
         view.addSubview(birthday)
         birthday.translatesAutoresizingMaskIntoConstraints = false
         birthday.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        birthday.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        birthday.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
         birthday.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         
         view.addSubview(pName)
@@ -79,37 +79,37 @@ class AboutMeInfoCell: UICollectionViewCell {
         pName.translatesAutoresizingMaskIntoConstraints = false
         pName.leftAnchor.constraint(equalTo: birthday.leftAnchor).isActive = true
         pName.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        pName.topAnchor.constraint(equalTo: birthday.bottomAnchor, constant: 18).isActive = true
+        pName.topAnchor.constraint(equalTo: birthday.bottomAnchor, constant: 20).isActive = true
         
         view.addSubview(address)
         address.translatesAutoresizingMaskIntoConstraints = false
         address.leftAnchor.constraint(equalTo: pName.leftAnchor).isActive = true
         address.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        address.topAnchor.constraint(equalTo: pName.bottomAnchor, constant: 18).isActive = true
+        address.topAnchor.constraint(equalTo: pName.bottomAnchor, constant: 20).isActive = true
 
         view.addSubview(school)
         school.translatesAutoresizingMaskIntoConstraints = false
         school.leftAnchor.constraint(equalTo: address.leftAnchor).isActive = true
         school.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        school.topAnchor.constraint(equalTo: address.bottomAnchor, constant: 18).isActive = true
+        school.topAnchor.constraint(equalTo: address.bottomAnchor, constant: 20).isActive = true
 
         view.addSubview(phone)
         phone.translatesAutoresizingMaskIntoConstraints = false
         phone.leftAnchor.constraint(equalTo: school.leftAnchor).isActive = true
         phone.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        phone.topAnchor.constraint(equalTo: school.bottomAnchor, constant: 18).isActive = true
+        phone.topAnchor.constraint(equalTo: school.bottomAnchor, constant: 20).isActive = true
 
         view.addSubview(email)
         email.translatesAutoresizingMaskIntoConstraints = false
         email.leftAnchor.constraint(equalTo: phone.leftAnchor).isActive = true
         email.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        email.topAnchor.constraint(equalTo: phone.bottomAnchor, constant: 18).isActive = true
+        email.topAnchor.constraint(equalTo: phone.bottomAnchor, constant: 20).isActive = true
 
         view.addSubview(moreButton)
         moreButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         moreButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         moreButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        moreButton.topAnchor.constraint(equalTo: email.bottomAnchor, constant: 20).isActive = true
+        moreButton.topAnchor.constraint(equalTo: email.bottomAnchor, constant: 30).isActive = true
 
         view.addSubview(separatorView)
         separatorView.heightAnchor.constraint(equalToConstant: 0.8).isActive = true

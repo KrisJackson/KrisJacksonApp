@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-apple-app-store-64.png",
+      "filename" : "icons8-app-symbol-64.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-apple-app-store-128.png",
+      "filename" : "icons8-app-symbol-128.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icons8-apple-app-store-256.png",
+      "filename" : "icons8-app-symbol-256.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

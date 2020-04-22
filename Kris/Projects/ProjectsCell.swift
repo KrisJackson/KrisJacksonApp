@@ -45,9 +45,10 @@ class ProjectsCell: UICollectionViewCell {
     
     let project: Features = {
         let features = Features()
+        features.iconHeight.constant = 38
         features.tintColor = ColorTheme.black
         features.translatesAutoresizingMaskIntoConstraints = false
-        features.header.font = .systemFont(ofSize: 18, weight: .bold)
+        features.header.font = .systemFont(ofSize: 20, weight: .bold)
         return features
     }()
     
@@ -94,7 +95,6 @@ class ProjectsCell: UICollectionViewCell {
         projectBackground.leftAnchor.constraint(equalTo: line.rightAnchor, constant: 0).isActive = true
         
         projectBackground.addSubview(project)
-        project.iconHeight.constant = 38
         project.centerXAnchor.constraint(equalTo: projectBackground.centerXAnchor).isActive = true
         project.topAnchor.constraint(equalTo: projectBackground.topAnchor).isActive = true
         project.leftAnchor.constraint(equalTo: projectBackground.leftAnchor).isActive = true
