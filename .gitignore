@@ -89,5 +89,6 @@ fastlane/test_output
 
 Kris/Secrets/
 Kris/GoogleService-Info.plist
+.idea
 
 iOSInjectionProject/
