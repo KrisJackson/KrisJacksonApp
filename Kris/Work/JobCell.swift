@@ -19,7 +19,7 @@ class JobCell: UICollectionViewCell {
     
     let jobBackground: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 12
+        view.layer.cornerRadius = 20
         view.backgroundColor = ColorTheme.white
         view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -34,7 +34,7 @@ class JobCell: UICollectionViewCell {
     let backgroundImage: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 12
+        imageView.layer.cornerRadius = 20
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = ColorTheme.aboutMeBackgroundView
         imageView.translatesAutoresizingMaskIntoConstraints = false

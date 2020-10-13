@@ -194,12 +194,6 @@ class InterestsViewController: UIViewController, UICollectionViewDelegate, UICol
         
         if let link: Link = blogs.object(forKey: indexPath.row - (3 + bookNum + albumNum) as AnyObject) {
             let linkview = LinkView(metadata: link.meta)
-            
-//            // View shadow
-//            linkview.layer.shadowRadius = 2
-//            linkview.layer.shadowOpacity = 1
-//            linkview.layer.shadowOffset = CGSize(width: 0, height: 0)
-//            linkview.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3)
             DispatchQueue.main.async {
                 linkview.translatesAutoresizingMaskIntoConstraints = false
                 for view in linkCell.backView.subviews {view.removeFromSuperview()}

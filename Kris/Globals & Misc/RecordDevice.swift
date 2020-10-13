@@ -24,9 +24,7 @@ extension AppDelegate {
                 "device": UIDevice.modelName,
                 "regionCode": Locale.current.regionCode ?? "Not Applicable",
                 "timezone": TimeZone.current.abbreviation() ?? "Not Applicable",
-                "lastLogIn": getTodayString(),
-                "carrier1": CTTelephonyNetworkInfo().serviceSubscriberCellularProviders?["0000000100000001"]?.carrierName ?? "Not Applicable",
-                "carrier2": CTTelephonyNetworkInfo().serviceSubscriberCellularProviders?["0000000100000002"]?.carrierName ?? "Not Applicable"
+                "lastLogIn": getTodayString()
             ], merge: true)
     }
 

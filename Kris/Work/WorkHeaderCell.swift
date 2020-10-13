@@ -28,9 +28,8 @@ class WorkHeaderCell: UICollectionViewCell {
         let view = UIView()
         view.addGestureRecognizer(skillsTapped)
         view.layer.cornerRadius = 20
-//        view.layer.masksToBounds = true
         view.backgroundColor = ColorTheme.gray
-        view.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false 
         return view
     }()
     
@@ -62,7 +61,6 @@ class WorkHeaderCell: UICollectionViewCell {
         let view = UIView()
         view.addGestureRecognizer(projectTapped)
         view.layer.cornerRadius = 20
-//        view.layer.masksToBounds = true
         view.backgroundColor = ColorTheme.gray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

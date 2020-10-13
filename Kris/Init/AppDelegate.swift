@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        GMSServices.provideAPIKey("AIzaSyAD9ePBI2HZ1u8ScKgIc786N1b_S9jSmfM")
-        GMSPlacesClient.provideAPIKey("AIzaSyAD9ePBI2HZ1u8ScKgIc786N1b_S9jSmfM")
+        GMSServices.provideAPIKey(GOOGLE_API_KEY)
+        GMSPlacesClient.provideAPIKey(GOOGLE_API_KEY)
         
         SDImageLoadersManager.shared.addLoader(SDImageLinkLoader.shared)
         SDWebImageManager.defaultImageLoader = SDImageLoadersManager.shared
@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-//      print(fcmToken)
+      print(fcmToken)
     }
     
     func updateFirestorePushTokenIfNeeded() {
@@ -100,7 +100,5 @@ extension AppDelegate {
     }
     
 }
-
-let KRIS_TOKEN = "dj4kO9i5uU-EpUKbL8piC0:APA91bEPS_ibOPXEU1nJ56zGKteMzcbVJu51wYOUVM1EHDs2HPRebb0l9ZAkNOl4ceR_hpFkNgvGpQp2r9SgpDxPwtG_81OUEEbEreWfWJA51PUBnmm3dBG7yZAVJDg02Re2znxKujj3"
 
 

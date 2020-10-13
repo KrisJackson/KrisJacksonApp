@@ -16,58 +16,6 @@ import GoogleMaps
 
 class AboutMeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate {
     
-    let user: UserData = {
-        let user = UserData()
-        user.first = "Kristopher"
-        user.last = "Jackson"
-        user.summary = "Computer Science major seeking a position as a full-time iOS or Software Developer starting in the Fall of 2021."
-        user.birthday = "July 3, 1998"
-        user.phone = 2256105747
-        user.email = "kristopherrjackson@gmail.com"
-        user.pFirst = "Kris"
-        user.linkedin = "https://linkedin.kristopherjackson.com"
-        user.portfolio = "https://portfolio.kristopherjackson.com"
-        user.instagram = "https://instagram.kristopherjackson.com"
-        user.resume = "https://firebasestorage.googleapis.com/v0/b/krisjackson-84f1b.appspot.com/o/Resume.pdf?alt=media"
-        user.website = "https://www.kristopherjackson.com"
-        user.stay = "Memphis, Tennessee"
-        user.objective = "Computer Science major seeking a full-time position in iOS Development or Software Engineering starting in the Fall of 2021. I have more than three years of professional programming experience, two years working with an outstanding team as co-founder of Netswitch LLC, and I have spent the last two summers working at Dell Technologies as a Machine Learning Intern. I am a leader, and I intend build more leaders throughout my lifelong journey in the tech industry."
-        return user
-    }()
-    
-    let highschool: Education = {
-        let school = Education()
-        school.name = "Episcopal School of BR"
-        school.phone = 2257533180
-        school.state = "Louisiana"
-        school.state_abr = "LA"
-        school.type = "High School"
-        school.website = "https://www.episcopalbr.org"
-        school.location = GeoPoint(latitude: 30.422687, longitude: -91.032938)
-        school.graduation = "May 2017"
-        school.city = "Baton Rouge"
-        school.address = "3200 Woodland Ridge Blvd Baton Rouge, LA 70816 United States"
-        return school
-    }()
-    
-    let college: Education = {
-        let school = Education()
-        school.name = "Rhodes College"
-        school.phone = 8008445969
-        school.state = "Tennessee"
-        school.state_abr = "TN"
-        school.time = "August 2017 - Present"
-        school.type = "College"
-        school.website = "https://www.rhodes.edu"
-        school.major = "Computer Science"
-        school.location = GeoPoint(latitude: 35.155687, longitude: -89.988937)
-        school.graduation = "May 2021"
-        school.city = "Memphis"
-        school.address = "2000 North Pkwy Memphis, TN 38112 United States"
-        school.classes = "Computer Networks; Software Engineering; Graphics, Virtual Environments, and Human Computer Interaction; Databases; Distributed Systems; Computer Organization; Discrete Structures; Data Structures and Algorithms; Advanced Algorithms; Object Oriented Programming"
-        return school
-    }()
-    
     fileprivate(set) var collectionView: UICollectionView
     
     let logoImage = UIImage(named: "Logo")?.withRenderingMode(.alwaysTemplate)
@@ -76,13 +24,6 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
         let view = UIView()
         view.backgroundColor = ColorTheme.blue
         view.translatesAutoresizingMaskIntoConstraints = false
-        
-//        // View shadow
-//        view.layer.shadowRadius = 4
-//        view.layer.shadowOpacity = 1
-//        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        view.layer.shadowColor = ColorTheme.tabBarShadowColor.cgColor
-        
         return view
     }()
     
@@ -408,7 +349,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
         let subview = (popUp.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
         subview.backgroundColor = .white
         popUp.addAction(UIAlertAction(title: "Portfolio", style: .default, handler: { (action) in
-            if let urlString: String = self.user.portfolio {
+            if let urlString: String = user.portfolio {
                 if let url = URL(string: urlString) {
                     let vc = SFSafariViewController(url: url)
                     vc.modalPresentationStyle = .fullScreen
@@ -420,7 +361,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
             }
         }))
         popUp.addAction(UIAlertAction(title: "Personal", style: .default, handler: { (action) in
-            if let urlString: String = self.user.instagram {
+            if let urlString: String = user.instagram {
                 if let url = URL(string: urlString) {
                     let vc = SFSafariViewController(url: url)
                     vc.preferredBarTintColor = ColorTheme.white
@@ -495,7 +436,7 @@ class AboutMeViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     @objc private func callNumber() {
-        if let phone: Int = self.user.phone {
+        if let phone: Int = user.phone {
             if let url = URL(string: "tel://+1\(phone)"), UIApplication.shared.canOpenURL(url) {
                 if #available(iOS 10, *) {
                     UIApplication.shared.open(url)

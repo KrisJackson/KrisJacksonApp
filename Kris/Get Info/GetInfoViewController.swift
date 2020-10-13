@@ -20,7 +20,7 @@ class GetInfoViewController: UIViewController {
         label.numberOfLines = 3
         label.text = "Let's Get To Know Each Other!"
         label.textColor = ColorTheme.black
-        label.font = .systemFont(ofSize: 28, weight: .bold)
+        label.font = .systemFont(ofSize: 28, weight: .heavy)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -178,7 +178,7 @@ class GetInfoViewController: UIViewController {
         scrollView.addSubview(submit)
         submit.leftAnchor.constraint(equalTo: firstTF.leftAnchor).isActive = true
         submit.rightAnchor.constraint(equalTo: lastTF.rightAnchor).isActive = true
-        submit.heightAnchor.constraint(equalTo: firstTF.heightAnchor).isActive = true
+        submit.heightAnchor.constraint(equalToConstant: 50).isActive = true
         submit.topAnchor.constraint(equalTo: companyTF.bottomAnchor, constant: 20).isActive = true
         submit.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -(view.frame.height - 350)).isActive = true
         

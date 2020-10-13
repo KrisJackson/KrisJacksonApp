@@ -192,7 +192,7 @@ class MoreInfoViewController: UIViewController {
             .withRenderingMode(.alwaysTemplate)
         infoView.icon.image = image
         infoView.body.text = "LinkedIn"
-        infoView.header.text = "https://www.linkedin.com/in/kristopher-jackson-38a995162/"
+        infoView.header.text = "https://www.linkedin.com/in/KristopherRJackson/"
         infoView.translatesAutoresizingMaskIntoConstraints = false
         return infoView
     }()

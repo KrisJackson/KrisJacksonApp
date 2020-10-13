@@ -18,18 +18,18 @@ class SkillsViewController: UIViewController, UICollectionViewDelegate, UICollec
     lazy var three: CGFloat = (view.frame.width - 100) * (3 / 4)
     lazy var four: CGFloat = (view.frame.width - 100)
     
-    let lang = ["Swift", "Python", "C, C++, C#", "HTML/CSS", "LAMP Stack", "SQL", "NoSQL", "Node.js", "Rust", "Go", "RISC Assembly Language"]
+    let lang = ["Swift", "Python", "C, C++", "Rust", "HTML/CSS", "LAMP Stack", "SQL", "Go", "Node.js", "RISC Assembly Language"]
     lazy var langScore = [
-        "Swift": four, "Python": four, "C, C++, C#": four, "HTML/CSS": four, "LAMP Stack": three, "SQL": three, "NoSQL": three, "Node.js": two, "Rust": one, "Go": one, "RISC Assembly Language": one]
-    let langIcon = ["Swift", "Python", "C", "HTML", "PHP", "SQL", "NoSQL", "JS", "Rust", "Go", "RISC"]
+        "Swift": four, "Python": four, "C, C++": four, "HTML/CSS": four, "Rust": four, "LAMP Stack": three, "SQL": three, "Go": two, "Node.js": two, "RISC Assembly Language": one]
+    let langIcon = ["Swift", "Python", "C", "Rust", "HTML", "PHP", "SQL", "Go", "JS", "RISC"]
     
     
-    let areas = ["iOS Development", "iOS Frameworks and SDKs", "Web Development", "API Design", "Computer Networking", "Machine Learning", "VR and Game Development"]
-    lazy var areasScore = ["iOS Development": four, "iOS Frameworks and SDKs": four, "Web Development": four, "API Design": four, "Computer Networking": three, "Machine Learning": two, "VR and Game Development": two]
-    let areasIcon = ["iOS", "SDK", "WebDev", "API", "Net", "ML", "VR"]
+    let areas = ["iOS Development", "iOS Frameworks and SDKs", "Machine Learning", "Web Development", "API Design", "Computer Networking", "VR and Game Development"]
+    lazy var areasScore = ["iOS Development": four, "iOS Frameworks and SDKs": four, "Machine Learning": four, "Web Development": four, "API Design": four, "Computer Networking": three, "VR and Game Development": two]
+    let areasIcon = ["iOS", "SDK", "ML", "WebDev", "API", "Net", "VR"]
     
     let os = ["MacOS", "Linux", "Windows"]
-    lazy var osScore = ["MacOS": four, "Linux": three, "Windows": three]
+    lazy var osScore = ["MacOS": four, "Linux": four, "Windows": three]
     let osIcon = ["Mac", "Linux", "Windows"]
     
     let header: UILabel = {

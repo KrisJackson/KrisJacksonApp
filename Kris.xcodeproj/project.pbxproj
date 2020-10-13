@@ -24,7 +24,6 @@
 		183BC2852428D357006A01F8 /* AboutMeEducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BC2842428D357006A01F8 /* AboutMeEducationCell.swift */; };
 		183BC288242B9E45006A01F8 /* WorkHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BC287242B9E45006A01F8 /* WorkHeaderCell.swift */; };
 		183BC28A242BA4B2006A01F8 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BC289242BA4B2006A01F8 /* JobCell.swift */; };
-		1863D0BE2449FE1800A3608D /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D0BD2449FE1800A3608D /* JobData.swift */; };
 		1863D0C1244A8D0000A3608D /* CustomAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D0C0244A8D0000A3608D /* CustomAdViewController.swift */; };
 		1863D0C3244B81C100A3608D /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D0C2244B81C100A3608D /* Features.swift */; };
 		186EA9E2243658D200282369 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9E1243658D200282369 /* LinkView.swift */; };
@@ -33,6 +32,7 @@
 		186EA9EE24399A1500282369 /* MessageHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EA9ED24399A1500282369 /* MessageHeaderCell.swift */; };
 		187566832442442F00F62C7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187566822442442F00F62C7A /* GoogleService-Info.plist */; };
 		187566852442466900F62C7A /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187566842442466900F62C7A /* PushNotification.swift */; };
+		187BDDE725360CA6006D84B6 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BDDE625360CA6006D84B6 /* Secrets.swift */; };
 		18873278244F8B5F001F410D /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18873277244F8B5F001F410D /* ProgressView.swift */; };
 		18CFF34A2442D6AF00D42016 /* InboxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFF3492442D6AF00D42016 /* InboxVC.swift */; };
 		18CFF34C2442D6C700D42016 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFF34B2442D6C700D42016 /* InboxCell.swift */; };
@@ -60,8 +60,6 @@
 		18EDACB82434D640004C11D8 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDACB72434D640004C11D8 /* LoadingViewController.swift */; };
 		18EDACBC2434FA88004C11D8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDACBB2434FA88004C11D8 /* PostCell.swift */; };
 		18EDACBE2435139B004C11D8 /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDACBD2435139B004C11D8 /* BlogCell.swift */; };
-		18F3292E243CC753000C0B15 /* GoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3292D243CC753000C0B15 /* GoogleAds.swift */; };
-		18F32932243CC7DF000C0B15 /* DetectScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */; };
 		18F32934243CC854000C0B15 /* PresentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32933243CC854000C0B15 /* PresentNotification.swift */; };
 		18F32938243CC9A3000C0B15 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32937243CC9A3000C0B15 /* TabBarViewController.swift */; };
 		18F3293A243CCA74000C0B15 /* TabBarSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F32939243CCA74000C0B15 /* TabBarSlideAnimation.swift */; };
@@ -104,7 +102,6 @@
 		183BC2842428D357006A01F8 /* AboutMeEducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeEducationCell.swift; sourceTree = "<group>"; };
 		183BC287242B9E45006A01F8 /* WorkHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHeaderCell.swift; sourceTree = "<group>"; };
 		183BC289242BA4B2006A01F8 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
-		1863D0BD2449FE1800A3608D /* JobData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
 		1863D0C0244A8D0000A3608D /* CustomAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAdViewController.swift; sourceTree = "<group>"; };
 		1863D0C2244B81C100A3608D /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		186EA9E1243658D200282369 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
@@ -114,6 +111,7 @@
 		187566822442442F00F62C7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		187566842442466900F62C7A /* PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		1875668624424A1200F62C7A /* Resume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Resume.entitlements; sourceTree = "<group>"; };
+		187BDDE625360CA6006D84B6 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		18873277244F8B5F001F410D /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		18CFF3492442D6AF00D42016 /* InboxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxVC.swift; sourceTree = "<group>"; };
 		18CFF34B2442D6C700D42016 /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
@@ -147,8 +145,6 @@
 		18EDACB72434D640004C11D8 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		18EDACBB2434FA88004C11D8 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		18EDACBD2435139B004C11D8 /* BlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCell.swift; sourceTree = "<group>"; };
-		18F3292D243CC753000C0B15 /* GoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAds.swift; sourceTree = "<group>"; };
-		18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectScreenShot.swift; sourceTree = "<group>"; };
 		18F32933243CC854000C0B15 /* PresentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentNotification.swift; sourceTree = "<group>"; };
 		18F32937243CC9A3000C0B15 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Kris/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		18F32939243CCA74000C0B15 /* TabBarSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSlideAnimation.swift; sourceTree = "<group>"; };
@@ -246,7 +242,6 @@
 				18ED98582426DDB300F98C67 /* WorkViewController.swift */,
 				183BC287242B9E45006A01F8 /* WorkHeaderCell.swift */,
 				183BC289242BA4B2006A01F8 /* JobCell.swift */,
-				1863D0BD2449FE1800A3608D /* JobData.swift */,
 			);
 			path = Work;
 			sourceTree = "<group>";
@@ -276,6 +271,14 @@
 				186EA9E92439097000282369 /* MessageCell.swift */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		187BDDE225360B03006D84B6 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				187BDDE625360CA6006D84B6 /* Secrets.swift */,
+			);
+			path = Secrets;
 			sourceTree = "<group>";
 		};
 		189A58482440F08C00CFB59B /* Init */ = {
@@ -366,6 +369,7 @@
 				18E7D3CB243D4A0000FF8FBF /* Blocked */,
 				18CFF3482442D67C00D42016 /* Inbox */,
 				18E7D3C2243D48CF00FF8FBF /* Globals & Misc */,
+				187BDDE225360B03006D84B6 /* Secrets */,
 				18ED982F2426D49A00F98C67 /* Assets.xcassets */,
 				18ED98342426D49A00F98C67 /* Info.plist */,
 				187566822442442F00F62C7A /* GoogleService-Info.plist */,
@@ -416,8 +420,6 @@
 			isa = PBXGroup;
 			children = (
 				18F32937243CC9A3000C0B15 /* TabBarViewController.swift */,
-				18F3292D243CC753000C0B15 /* GoogleAds.swift */,
-				18F32931243CC7DF000C0B15 /* DetectScreenShot.swift */,
 				18F32939243CCA74000C0B15 /* TabBarSlideAnimation.swift */,
 				18F32933243CC854000C0B15 /* PresentNotification.swift */,
 			);
@@ -456,8 +458,8 @@
 				18ED981F2426D49900F98C67 /* Sources */,
 				18ED98202426D49900F98C67 /* Frameworks */,
 				18ED98212426D49900F98C67 /* Resources */,
-				E5D62FD50095D3069C215058 /* [CP] Embed Pods Frameworks */,
-				92B85E1995D1513EFE75AB09 /* [CP] Copy Pods Resources */,
+				A1F4648627DDE170D06F06B8 /* [CP] Embed Pods Frameworks */,
+				F0B76AB992E70186B6FCF302 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -495,8 +497,8 @@
 				18ED98402426D49A00F98C67 /* Sources */,
 				18ED98412426D49A00F98C67 /* Frameworks */,
 				18ED98422426D49A00F98C67 /* Resources */,
-				5141725DAE22C6CC248EC1C5 /* [CP] Embed Pods Frameworks */,
-				C6CD614856C1C435E36A2D2E /* [CP] Copy Pods Resources */,
+				FF0AD9153902998CC5C592DF /* [CP] Embed Pods Frameworks */,
+				80E07E805EB9EC43296076CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -624,38 +626,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5141725DAE22C6CC248EC1C5 /* [CP] Embed Pods Frameworks */ = {
+		80E07E805EB9EC43296076CE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		92B85E1995D1513EFE75AB09 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1F4648627DDE170D06F06B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE0331035E3715B985407CE7 /* [CP] Check Pods Manifest.lock */ = {
@@ -680,38 +682,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C6CD614856C1C435E36A2D2E /* [CP] Copy Pods Resources */ = {
+		F0B76AB992E70186B6FCF302 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5D62FD50095D3069C215058 /* [CP] Embed Pods Frameworks */ = {
+		FF0AD9153902998CC5C592DF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kris/Pods-Kris-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kris-KrisUITests/Pods-Kris-KrisUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -733,7 +735,6 @@
 				18E7D3C8243D497B00FF8FBF /* Vibrations.swift in Sources */,
 				18F32938243CC9A3000C0B15 /* TabBarViewController.swift in Sources */,
 				182580BA243374FC00A0317E /* AlbumCell.swift in Sources */,
-				1863D0BE2449FE1800A3608D /* JobData.swift in Sources */,
 				183BC2852428D357006A01F8 /* AboutMeEducationCell.swift in Sources */,
 				18ED982B2426D49900F98C67 /* AboutMeViewController.swift in Sources */,
 				182580A8242E418300A0317E /* SkillCellwHeader.swift in Sources */,
@@ -752,11 +753,11 @@
 				182070C6244D009800C741E2 /* MoreInfoViewController.swift in Sources */,
 				18E7D3D1243D4AAD00FF8FBF /* RecordDevice.swift in Sources */,
 				18ED98292426D49900F98C67 /* SceneDelegate.swift in Sources */,
+				187BDDE725360CA6006D84B6 /* Secrets.swift in Sources */,
 				18ED98662427A2B000F98C67 /* AboutMeHeaderCell.swift in Sources */,
 				182580B32431A78100A0317E /* BookCell.swift in Sources */,
 				183BC288242B9E45006A01F8 /* WorkHeaderCell.swift in Sources */,
 				18EDACBC2434FA88004C11D8 /* PostCell.swift in Sources */,
-				18F32932243CC7DF000C0B15 /* DetectScreenShot.swift in Sources */,
 				182580AA242E474100A0317E /* SkillsViewController.swift in Sources */,
 				186EA9EA2439097000282369 /* MessageCell.swift in Sources */,
 				182580A6242E416300A0317E /* SkillCell.swift in Sources */,
@@ -771,7 +772,6 @@
 				186EA9E2243658D200282369 /* LinkView.swift in Sources */,
 				182580B0242FD9D300A0317E /* ProjectsCell.swift in Sources */,
 				186EA9EE24399A1500282369 /* MessageHeaderCell.swift in Sources */,
-				18F3292E243CC753000C0B15 /* GoogleAds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -947,7 +947,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kris/Resume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = Kris/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -969,7 +969,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kris/Resume.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = Kris/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

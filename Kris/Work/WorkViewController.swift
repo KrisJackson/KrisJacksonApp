@@ -21,13 +21,6 @@ class WorkViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let view = UIView()
         view.backgroundColor = ColorTheme.blue
         view.translatesAutoresizingMaskIntoConstraints = false
-        
-//        // View shadow
-//        view.layer.shadowRadius = 4
-//        view.layer.shadowOpacity = 1
-//        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        view.layer.shadowColor = ColorTheme.tabBarShadowColor.cgColor
-        
         return view
     }()
     
@@ -176,23 +169,21 @@ class WorkViewController: UIViewController, UICollectionViewDelegate, UICollecti
             .order(by: "priority", descending: false)
             .addSnapshotListener { (snapshot, error) in
             if let snapshot = snapshot {
-                for (i, document) in snapshot.documents.enumerated() {
-                    DispatchQueue.main.async {
-                        let job = Jobs()
-                        job.main_img = document.data()["main_img"] as? String
-                        job.background_img = document.data()["background_img"] as? String
-                        job.company = document.data()["company"] as? String
-                        job.job = document.data()["title"] as? String
-                        job.desc = document.data()["desc"] as? String
-                        job.duration = document.data()["duration"] as? String
-                        job.city = document.data()["city"] as? String
-                        job.state = document.data()["state"] as? String
-                        job.type = document.data()["type"] as? String
-                        job.tools = document.data()["tools"] as? String
-                        self.cache.setObject(job, forKey: i as AnyObject)
-                    }
-                }
                 DispatchQueue.main.async {
+                    for (i, document) in snapshot.documents.enumerated() {
+                            let job = Jobs()
+                            job.main_img = document.data()["main_img"] as? String
+                            job.background_img = document.data()["background_img"] as? String
+                            job.company = document.data()["company"] as? String
+                            job.job = document.data()["title"] as? String
+                            job.desc = document.data()["desc"] as? String
+                            job.duration = document.data()["duration"] as? String
+                            job.city = document.data()["city"] as? String
+                            job.state = document.data()["state"] as? String
+                            job.type = document.data()["type"] as? String
+                            job.tools = document.data()["tools"] as? String
+                            self.cache.setObject(job, forKey: i as AnyObject)
+                    }
                     self.num = snapshot.count
                     self.collectionView.reloadData()
                 }

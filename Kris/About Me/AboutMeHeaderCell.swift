@@ -30,7 +30,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
     let backgroundImage: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 0
+        imageView.layer.cornerRadius = 30
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = ColorTheme.aboutMeBackgroundView
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +55,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
         label.numberOfLines = 2
         label.textAlignment = .center
         label.textColor = ColorTheme.black
-        label.font = .systemFont(ofSize: 28, weight: .bold)
+        label.font = .systemFont(ofSize: 32, weight: .heavy)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -168,11 +168,11 @@ class AboutMeHeaderCell: UICollectionViewCell {
     
     let objectiveHeaderLabel: UILabel = {
         let label = UILabel()
-        label.text = "Career Objective"
+        label.text = "About Me"
         label.numberOfLines = 2
         label.textAlignment = .left
         label.textColor = ColorTheme.black
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.font = .systemFont(ofSize: 24, weight: .heavy)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -182,7 +182,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
         label.numberOfLines = 1000
         label.textAlignment = .left
         label.textColor = ColorTheme.aboutMeDescriptionText
-        label.font = .systemFont(ofSize: 16, weight: .regular)
+        label.font = .systemFont(ofSize: 17, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -243,9 +243,9 @@ class AboutMeHeaderCell: UICollectionViewCell {
         view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         view.addSubview(backgroundImage)
-        backgroundImage.heightAnchor.constraint(equalToConstant: 220).isActive = true
-        backgroundImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        backgroundImage.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        backgroundImage.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        backgroundImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 15).isActive = true
+        backgroundImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
         backgroundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         view.addSubview(profilePictureImage)
@@ -324,7 +324,7 @@ class AboutMeHeaderCell: UICollectionViewCell {
         objectiveBackground.addSubview(objectiveLabel)
         objectiveLabel.leftAnchor.constraint(equalTo: objectiveHeaderLabel.leftAnchor).isActive = true
         objectiveLabel.centerXAnchor.constraint(equalTo: objectiveHeaderLabel.centerXAnchor).isActive = true
-        objectiveLabel.topAnchor.constraint(equalTo: objectiveHeaderLabel.bottomAnchor, constant: 5).isActive = true
+        objectiveLabel.topAnchor.constraint(equalTo: objectiveHeaderLabel.bottomAnchor, constant: 8).isActive = true
         
         objectiveBackground.addSubview(emailButton)
         emailButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -340,13 +340,6 @@ class AboutMeHeaderCell: UICollectionViewCell {
         resumeButton.leftAnchor.constraint(equalTo: emailButton.rightAnchor, constant: 6).isActive = true
         
         objectiveBackground.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
-//        view.addSubview(separatorView2)
-//        separatorView2.heightAnchor.constraint(equalToConstant: 0.0).isActive = true
-//        separatorView2.leftAnchor.constraint(equalTo: descLabel.leftAnchor).isActive = true
-//        separatorView2.centerXAnchor.constraint(equalTo: descLabel.centerXAnchor).isActive = true
-//        separatorView2.topAnchor.constraint(equalTo: objectiveBackground.bottomAnchor, constant: 15).isActive = true
-//        separatorView2.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         setImage(imageView: profilePictureImage, key: "profileImage")
         setImage(imageView: backgroundImage, key: "backgroundImage")
