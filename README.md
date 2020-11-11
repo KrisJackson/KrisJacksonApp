@@ -1,4 +1,5 @@
 # KrisJacksonApp
+*** This app is no longer being maintained *** <br>
 An app version of my resume modeled after Facebook.<br> 
 
 This app can be downloaded only on TestFlight by clicking the link on an iPhone: https://testflight.apple.com/join/hhRuzMJb<br>
